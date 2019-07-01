@@ -1,0 +1,9 @@
+test\guidemo_touch.o: ..\EMWIN\Demo\GUIDEMO_Touch.c
+test\guidemo_touch.o: ..\EMWIN\STemWin\inc\GUI.h
+test\guidemo_touch.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\guidemo_touch.o: ..\EMWIN\STemWin\inc\GUI_ConfDefaults.h
+test\guidemo_touch.o: ..\EMWIN\STemWin\Config\GUIConf.h
+test\guidemo_touch.o: ..\EMWIN\STemWin\inc\GUI_Type.h
+test\guidemo_touch.o: ..\EMWIN\STemWin\inc\LCD.h
+test\guidemo_touch.o: ..\EMWIN\STemWin\inc\Global.h
+test\guidemo_touch.o: ..\EMWIN\STemWin\inc\GUI_Version.h

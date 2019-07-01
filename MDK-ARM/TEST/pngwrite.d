@@ -1,0 +1,10 @@
+test\pngwrite.o: ..\EMWIN\STemWinPNG\pngwrite.c
+test\pngwrite.o: ..\EMWIN\STemWinPNG\png.h
+test\pngwrite.o: ..\EMWIN\STemWinPNG\zlib.h
+test\pngwrite.o: ..\EMWIN\STemWinPNG\zconf.h
+test\pngwrite.o: ..\EMWIN\STemWinPNG\pngconf.h
+test\pngwrite.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\setjmp.h
+test\pngwrite.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\pngwrite.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\pngwrite.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+test\pngwrite.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

@@ -1,0 +1,10 @@
+test\crc32.o: ..\EMWIN\STemWinPNG\crc32.c
+test\crc32.o: ..\EMWIN\STemWinPNG\zutil.h
+test\crc32.o: ..\EMWIN\STemWinPNG\zlib.h
+test\crc32.o: ..\EMWIN\STemWinPNG\zconf.h
+test\crc32.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\crc32.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\crc32.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\crc32.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+test\crc32.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\limits.h
+test\crc32.o: ..\EMWIN\STemWinPNG\crc32.h

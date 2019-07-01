@@ -1,0 +1,10 @@
+test\pngrutil.o: ..\EMWIN\STemWinPNG\pngrutil.c
+test\pngrutil.o: ..\EMWIN\STemWinPNG\png.h
+test\pngrutil.o: ..\EMWIN\STemWinPNG\zlib.h
+test\pngrutil.o: ..\EMWIN\STemWinPNG\zconf.h
+test\pngrutil.o: ..\EMWIN\STemWinPNG\pngconf.h
+test\pngrutil.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\setjmp.h
+test\pngrutil.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\pngrutil.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\pngrutil.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+test\pngrutil.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

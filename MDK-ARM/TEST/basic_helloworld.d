@@ -1,0 +1,9 @@
+test\basic_helloworld.o: ..\EMWIN\Demo\BASIC_HelloWorld.c
+test\basic_helloworld.o: ..\EMWIN\STemWin\inc\GUI.h
+test\basic_helloworld.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\basic_helloworld.o: ..\EMWIN\STemWin\inc\GUI_ConfDefaults.h
+test\basic_helloworld.o: ..\EMWIN\STemWin\Config\GUIConf.h
+test\basic_helloworld.o: ..\EMWIN\STemWin\inc\GUI_Type.h
+test\basic_helloworld.o: ..\EMWIN\STemWin\inc\LCD.h
+test\basic_helloworld.o: ..\EMWIN\STemWin\inc\Global.h
+test\basic_helloworld.o: ..\EMWIN\STemWin\inc\GUI_Version.h

@@ -1,0 +1,11 @@
+test\iconbmp.o: ..\EMWIN\tsst\iconbmp.c
+test\iconbmp.o: ..\EMWIN\tsst\iconbmp.h
+test\iconbmp.o: ..\EMWIN\STemWin\inc\GUI.h
+test\iconbmp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\iconbmp.o: ..\EMWIN\STemWin\inc\GUI_ConfDefaults.h
+test\iconbmp.o: ..\EMWIN\STemWin\Config\GUIConf.h
+test\iconbmp.o: ..\EMWIN\STemWin\inc\GUI_Type.h
+test\iconbmp.o: ..\EMWIN\STemWin\inc\LCD.h
+test\iconbmp.o: ..\EMWIN\STemWin\inc\Global.h
+test\iconbmp.o: ..\EMWIN\STemWin\inc\GUI_Version.h
+test\iconbmp.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

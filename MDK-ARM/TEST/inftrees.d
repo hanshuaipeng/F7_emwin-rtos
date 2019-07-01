@@ -1,0 +1,9 @@
+test\inftrees.o: ..\EMWIN\STemWinPNG\inftrees.c
+test\inftrees.o: ..\EMWIN\STemWinPNG\zutil.h
+test\inftrees.o: ..\EMWIN\STemWinPNG\zlib.h
+test\inftrees.o: ..\EMWIN\STemWinPNG\zconf.h
+test\inftrees.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\inftrees.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\inftrees.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\inftrees.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+test\inftrees.o: ..\EMWIN\STemWinPNG\inftrees.h

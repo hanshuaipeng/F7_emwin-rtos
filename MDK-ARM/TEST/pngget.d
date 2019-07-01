@@ -1,0 +1,10 @@
+test\pngget.o: ..\EMWIN\STemWinPNG\pngget.c
+test\pngget.o: ..\EMWIN\STemWinPNG\png.h
+test\pngget.o: ..\EMWIN\STemWinPNG\zlib.h
+test\pngget.o: ..\EMWIN\STemWinPNG\zconf.h
+test\pngget.o: ..\EMWIN\STemWinPNG\pngconf.h
+test\pngget.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\setjmp.h
+test\pngget.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\pngget.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\pngget.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+test\pngget.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

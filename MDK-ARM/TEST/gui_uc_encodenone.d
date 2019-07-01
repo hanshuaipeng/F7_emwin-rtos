@@ -1,0 +1,13 @@
+test\gui_uc_encodenone.o: ..\EMWIN\STemWinHZ\GUI_UC_EncodeNone.c
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\GUI_Private.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\GUI.h
+test\gui_uc_encodenone.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\GUI_ConfDefaults.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\Config\GUIConf.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\GUI_Type.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\LCD.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\Global.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\GUI_Version.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\LCD_Protected.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\GUI_Debug.h
+test\gui_uc_encodenone.o: ..\EMWIN\STemWin\inc\WM_GUI.h

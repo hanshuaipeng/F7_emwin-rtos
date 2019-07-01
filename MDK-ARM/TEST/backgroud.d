@@ -1,0 +1,11 @@
+test\backgroud.o: ..\EMWIN\tsst\backgroud.c
+test\backgroud.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\backgroud.o: ..\EMWIN\tsst\iconbmp.h
+test\backgroud.o: ..\EMWIN\STemWin\inc\GUI.h
+test\backgroud.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\backgroud.o: ..\EMWIN\STemWin\inc\GUI_ConfDefaults.h
+test\backgroud.o: ..\EMWIN\STemWin\Config\GUIConf.h
+test\backgroud.o: ..\EMWIN\STemWin\inc\GUI_Type.h
+test\backgroud.o: ..\EMWIN\STemWin\inc\LCD.h
+test\backgroud.o: ..\EMWIN\STemWin\inc\Global.h
+test\backgroud.o: ..\EMWIN\STemWin\inc\GUI_Version.h

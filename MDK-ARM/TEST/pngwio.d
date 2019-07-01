@@ -1,0 +1,10 @@
+test\pngwio.o: ..\EMWIN\STemWinPNG\pngwio.c
+test\pngwio.o: ..\EMWIN\STemWinPNG\png.h
+test\pngwio.o: ..\EMWIN\STemWinPNG\zlib.h
+test\pngwio.o: ..\EMWIN\STemWinPNG\zconf.h
+test\pngwio.o: ..\EMWIN\STemWinPNG\pngconf.h
+test\pngwio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\setjmp.h
+test\pngwio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\pngwio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\pngwio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+test\pngwio.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

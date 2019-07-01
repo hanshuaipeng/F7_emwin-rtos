@@ -1,0 +1,9 @@
+test\gui_fonthz16.o: ..\EMWIN\STemWinHZ\GUI_FontHZ16.c
+test\gui_fonthz16.o: ..\EMWIN\STemWin\inc\GUI.h
+test\gui_fonthz16.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\gui_fonthz16.o: ..\EMWIN\STemWin\inc\GUI_ConfDefaults.h
+test\gui_fonthz16.o: ..\EMWIN\STemWin\Config\GUIConf.h
+test\gui_fonthz16.o: ..\EMWIN\STemWin\inc\GUI_Type.h
+test\gui_fonthz16.o: ..\EMWIN\STemWin\inc\LCD.h
+test\gui_fonthz16.o: ..\EMWIN\STemWin\inc\Global.h
+test\gui_fonthz16.o: ..\EMWIN\STemWin\inc\GUI_Version.h

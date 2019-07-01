@@ -1,0 +1,10 @@
+test\pngrtran.o: ..\EMWIN\STemWinPNG\pngrtran.c
+test\pngrtran.o: ..\EMWIN\STemWinPNG\png.h
+test\pngrtran.o: ..\EMWIN\STemWinPNG\zlib.h
+test\pngrtran.o: ..\EMWIN\STemWinPNG\zconf.h
+test\pngrtran.o: ..\EMWIN\STemWinPNG\pngconf.h
+test\pngrtran.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\setjmp.h
+test\pngrtran.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\pngrtran.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\pngrtran.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+test\pngrtran.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h

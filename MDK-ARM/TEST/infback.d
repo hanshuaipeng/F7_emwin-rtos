@@ -1,0 +1,12 @@
+test\infback.o: ..\EMWIN\STemWinPNG\infback.c
+test\infback.o: ..\EMWIN\STemWinPNG\zutil.h
+test\infback.o: ..\EMWIN\STemWinPNG\zlib.h
+test\infback.o: ..\EMWIN\STemWinPNG\zconf.h
+test\infback.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\infback.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+test\infback.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\infback.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+test\infback.o: ..\EMWIN\STemWinPNG\inftrees.h
+test\infback.o: ..\EMWIN\STemWinPNG\inflate.h
+test\infback.o: ..\EMWIN\STemWinPNG\inffast.h
+test\infback.o: ..\EMWIN\STemWinPNG\inffixed.h
