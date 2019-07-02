@@ -86,7 +86,7 @@
 "test\timers.o"
 "test\heap_4.o"
 "test\port.o"
-"..\EMWIN\STemWin\Lib\STemWin_CM7_wc16.a"
+"..\EMWIN\STemWin\Lib\STemWin_CM7_OS_wc16_ot.a"
 "test\gui_x_touch_analog.o"
 "test\guiconf.o"
 "test\lcdconf_lin_template.o"

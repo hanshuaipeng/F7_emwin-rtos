@@ -64,7 +64,8 @@ uint8_t CT_IIC_Wait_Ack(void)
 {
 	uint8_t ucErrTime=0;
 	CT_SDA_IN();      //SDA…Ë÷√Œ™ ‰»Î  
-	CT_IIC_SDA(1);	   
+	CT_IIC_SDA(1);
+	delay_us(2);	
 	CT_IIC_SCL(1);
 	CT_Delay();
 	while(CT_READ_SDA)

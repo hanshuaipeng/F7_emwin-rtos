@@ -56,7 +56,7 @@ void start_task(void *pvParameters);
 //设置任务优先级
 #define TOUCH_TASK_PRIO			2
 //任务堆栈大小
-#define TOUCH_STK_SIZE			128
+#define TOUCH_STK_SIZE			512
 //任务句柄
 TaskHandle_t TouchTask_Handler;
 //touch任务
@@ -66,7 +66,7 @@ void touch_task(void *pvParameters);
 //设置任务优先级
 #define LED0_TASK_PRIO 			3
 //任务堆栈大小
-#define LED0_STK_SIZE			256
+#define LED0_STK_SIZE			512
 //任务句柄
 TaskHandle_t Led0Task_Handler;
 //led0任务
@@ -159,6 +159,7 @@ void touch_task(void *pvParameters)
 {
 	while(1)
 	{
+		
 		GUI_TOUCH_Exec();
 //		USBH_Process(&hUSBHost);	
 		vTaskDelay(5);		//延时5ms

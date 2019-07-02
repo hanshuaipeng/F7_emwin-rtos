@@ -30,7 +30,7 @@
 #define SD_TIMEOUT      	((uint32_t)100000000)       //³¬Ê±Ê±¼ä
 #define SD_TRANSFER_OK     	((uint8_t)0x00)
 #define SD_TRANSFER_BUSY   	((uint8_t)0x01)
-#define SDMMC_DMA			1
+#define SDMMC_DMA			0
 /* USER CODE END Includes */
 
 extern SD_HandleTypeDef hsd1;

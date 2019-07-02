@@ -19,3 +19,8 @@ GUI_Type.h  429行添加
 #if defined(__cplusplus)
   }
 #endif
+
+7/2
+
+使用STemWin_CM7_OS_wc16_ot.a
+优化等级-1
