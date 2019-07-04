@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx,USE_USB_FS</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;..\FATFS\src;..\USB\STM32_USB_Host_Library\Core\Inc;..\USB;..\USB\STM32_USB_Host_Library\Class\MSC\Inc;..\FATFS\exfuns;..\Chinese;..\TOUCH;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;..\Drivers\CMSIS\DSP\Include;..\EMWIN\STemWin\Config;..\EMWIN\STemWin\inc;..\EMWIN\DEMO;..\EMWIN\tsst;..\EMWIN\STemWinHZ;..\EMWIN\HZDEMO;..\EMWIN\JPEG;..\EMWIN\EMWIN_PICTURE\BMP;..\EMWIN\EMWIN_PICTURE\GIF;..\EMWIN\EMWIN_PICTURE\JPEG;..\EMWIN\EMWIN_PICTURE\PNG;..\EMWIN;..\EMWIN\STemWinPNG</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;..\FATFS\src;..\USB\STM32_USB_Host_Library\Core\Inc;..\USB;..\USB\STM32_USB_Host_Library\Class\MSC\Inc;..\FATFS\exfuns;..\Chinese;..\TOUCH;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;..\Drivers\CMSIS\DSP\Include;..\EMWIN\STemWin\Config;..\EMWIN\STemWin\inc;..\EMWIN\DEMO;..\EMWIN\tsst;..\EMWIN\STemWinHZ;..\EMWIN\HZDEMO;..\EMWIN\JPEG;..\EMWIN\EMWIN_PICTURE\BMP;..\EMWIN\EMWIN_PICTURE\GIF;..\EMWIN\EMWIN_PICTURE\JPEG;..\EMWIN\EMWIN_PICTURE\PNG;..\EMWIN;..\EMWIN\STemWinPNG;..\EMWIN\KEYPAD;..\T9INPUT</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -816,6 +816,16 @@
               <FileName>gt9147.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\TOUCH\gt9147.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>T9INPUT</GroupName>
+          <Files>
+            <File>
+              <FileName>pyinput.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\T9INPUT\pyinput.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1323,6 +1333,16 @@
               <FileName>zutil.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\EMWIN\STemWinPNG\zutil.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>EMWIN_PAD</GroupName>
+          <Files>
+            <File>
+              <FileName>keypad.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\KEYPAD\keypad.c</FilePath>
             </File>
           </Files>
         </Group>

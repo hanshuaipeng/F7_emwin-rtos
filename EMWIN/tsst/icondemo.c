@@ -11,6 +11,7 @@
 #include "picture_app.h"
 #include "jpegdisplay.h"
 #include "use_app.h"
+#include "keypad.h"
 #define ID_ICONVIEW_0   (GUI_ID_USER + 0x01)
 
 uint8_t Document_ICON=0;
@@ -92,7 +93,9 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 								case 4:		//APP3
                                     CreateUseAppwin();    //´´½¨BrowerAPP
 									break;
-								
+								case 5:	
+									keypad_demo();
+								break;
 							}
 							break;
 						case WM_NOTIFICATION_SEL_CHANGED:
