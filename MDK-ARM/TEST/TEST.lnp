@@ -141,6 +141,7 @@
 "test\led_beep.o"
 "test\picture_app.o"
 "test\use_app.o"
+"test\comapp.o"
 --library_type=microlib --strict --scatter "TEST\TEST.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

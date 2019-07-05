@@ -137,3 +137,4 @@ test\icondemo.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 test\icondemo.o: ..\EMWIN\tsst\use_app.h
 test\icondemo.o: ..\EMWIN\KEYPAD\keypad.h
 test\icondemo.o: ..\T9INPUT\pyinput.h
+test\icondemo.o: ..\EMWIN\tsst\comapp.h

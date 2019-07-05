@@ -12,6 +12,7 @@
 #include "jpegdisplay.h"
 #include "use_app.h"
 #include "keypad.h"
+#include "comapp.h"
 #define ID_ICONVIEW_0   (GUI_ID_USER + 0x01)
 
 uint8_t Document_ICON=0;
@@ -81,20 +82,21 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 										CreateFramewin();      //创建LEDAPP
 									break;
 								case 1:		//APP1
-										CreateDocuments();    //创建DocumentsAPP
+										CreateDocuments();    //创建文件管理APP
 									break;
                                	case 2:		//APP2
-                                  HzFontupdataCreate();    //创建BookshAPP
+                                  HzFontupdataCreate();    //创建字库升级
 //								MESSAGEBOX_Create("update","ceshi",GUI_MESSAGEBOX_CF_MODAL);
 									break;
                                 case 3:		//APP3
-//                                    CreatePICTURE();    //创建BrowerAPP
+//                                    CreatePICTURE();    //创建图片
 									break;
 								case 4:		//APP3
-                                    CreateUseAppwin();    //创建BrowerAPP
+                                    CreateUseAppwin();    //创建使用率
 									break;
 								case 5:	
-									keypad_demo();
+									comAppwin() ;
+									keypad_demo();		//创建串口
 								break;
 							}
 							break;

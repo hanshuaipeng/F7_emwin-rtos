@@ -1394,6 +1394,11 @@
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\use_app.c</FilePath>
             </File>
+            <File>
+              <FileName>comapp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\comapp.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
