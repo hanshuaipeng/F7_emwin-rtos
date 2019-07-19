@@ -88,6 +88,7 @@ static void _LEDcbDialog(WM_MESSAGE * pMsg) {
 	FRAMEWIN_AddCloseButton(hItem,FRAMEWIN_BUTTON_RIGHT,2); //添加关闭按钮
 	FRAMEWIN_AddMaxButton(hItem,FRAMEWIN_BUTTON_RIGHT,2);   //添加最大化按钮
 	FRAMEWIN_AddMinButton(hItem,FRAMEWIN_BUTTON_RIGHT,2);   //添加最小化按钮
+    FRAMEWIN_SetTitleHeight(hItem,20);
 	//初始化BUTTON0
 	hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_0);
 	BUTTON_SetBitmapEx(hItem,0,led1flag?&buttonbmp_tab[1]:&buttonbmp_tab[0],0,0);

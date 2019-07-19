@@ -27,8 +27,8 @@
 #include "PROGBAR.h"
 #include "SCROLLBAR.h"
 #include "LISTVIEW.h"
-
-
+#include "EmWinHZFont.h"
+#include "keypad.h"
 
 
 
@@ -78,7 +78,8 @@ static const GUI_WIDGET_CREATE_INFO _comDialogCreate[] = {
 void PaintDialog(WM_MESSAGE * pMsg)
 {
     WM_HWIN hWin = pMsg->hWin;
-
+	GUI_Clear();
+	GUI_SetBkColor(GUI_BLACK);
 }
 
 
@@ -100,16 +101,30 @@ void InitDialog(WM_MESSAGE * pMsg)
     FRAMEWIN_AddMaxButton(hWin, FRAMEWIN_BUTTON_RIGHT, 1);
     FRAMEWIN_AddMinButton(hWin, FRAMEWIN_BUTTON_RIGHT, 2);
     FRAMEWIN_SetTitleHeight(hWin,20);
+	FRAMEWIN_SetTextAlign(hWin, GUI_TA_HCENTER | GUI_TA_VCENTER);
+	FRAMEWIN_SetFont(hWin,&GUI_FontHZ16);
+	FRAMEWIN_SetTextColor(hWin, GUI_RED);
+	FRAMEWIN_SetText(hWin, "串口调试");
+	
+	BUTTON_SetFont(WM_GetDialogItem(hWin,GUI_ID_BUTTON1), &GUI_FontHZ12);
+	BUTTON_SetText(WM_GetDialogItem(hWin,GUI_ID_BUTTON1),"打开");
+	BUTTON_SetFont(WM_GetDialogItem(hWin,GUI_ID_BUTTON2), &GUI_FontHZ12);
+	BUTTON_SetText(WM_GetDialogItem(hWin,GUI_ID_BUTTON2),"发送");
     //
     //GUI_ID_MULTIEDIT0
     //
-    MULTIEDIT_SetAutoScrollH(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
+	MULTIEDIT_SetFont(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0), &GUI_FontHZ24);
+	MULTIEDIT_SetAutoScrollH(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
     MULTIEDIT_SetAutoScrollV(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
+	MULTIEDIT_SetReadOnly(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
     //
     //GUI_ID_MULTIEDIT1
     //
-    MULTIEDIT_SetAutoScrollH(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1);
+	MULTIEDIT_SetFont(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1), &GUI_FontHZ24);
+	 MULTIEDIT_SetAutoScrollH(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1);
     MULTIEDIT_SetAutoScrollV(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1);
+	MULTIEDIT_EnableBlink(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),500,1);			//开启光标,周期500ms
+    MULTIEDIT_SetInsertMode(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1);  //开启插入模式
     //
     //GUI_ID_DROPDOWN0
     //
@@ -145,6 +160,9 @@ static void _comCallback(WM_MESSAGE * pMsg)
     WM_HWIN hWin = pMsg->hWin;
     switch (pMsg->MsgId) 
     {
+		case WM_DELETE:
+			WM_DeleteWindow(keypad_dev.hKeypad);//删除键盘
+			break;
         case WM_PAINT:
             PaintDialog(pMsg);
             break;
@@ -178,8 +196,11 @@ static void _comCallback(WM_MESSAGE * pMsg)
                 case GUI_ID_MULTIEDIT1:
                     switch(NCode)
                     {
-                        case WM_NOTIFICATION_SEL_CHANGED:
+                        case WM_NOTIFICATION_RELEASED:
 //                            OnMultiEditSelChanged(pMsg);
+							WM_SetFocus(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1));
+						if(keypad_dev.hKeypad==NULL)//如果没有创建键盘，创建键盘
+							keypad_demo();
                             break;
                     }
                     break;
@@ -232,22 +253,6 @@ static void _comCallback(WM_MESSAGE * pMsg)
 */
 void comAppwin(void) 
 { 
-    GUI_Init();
-    WM_SetDesktopColor(GUI_WHITE);      /* Automacally update desktop window */
-    WM_SetCreateFlags(WM_CF_MEMDEV);  /* Use memory devices on all windows to avoid flicker */
-    //PROGBAR_SetDefaultSkin(PROGBAR_SKIN_FLEX);
-    //FRAMEWIN_SetDefaultSkin(FRAMEWIN_SKIN_FLEX);
-    //PROGBAR_SetDefaultSkin(PROGBAR_SKIN_FLEX);
-    //BUTTON_SetDefaultSkin(BUTTON_SKIN_FLEX);
-    //CHECKBOX_SetDefaultSkin(CHECKBOX_SKIN_FLEX);
-    //DROPDOWN_SetDefaultSkin(DROPDOWN_SKIN_FLEX);
-    //SCROLLBAR_SetDefaultSkin(SCROLLBAR_SKIN_FLEX);
-    //SLIDER_SetDefaultSkin(SLIDER_SKIN_FLEX);
-    //HEADER_SetDefaultSkin(HEADER_SKIN_FLEX);
-    //RADIO_SetDefaultSkin(RADIO_SKIN_FLEX);
-	while(1)
-	{
-        GUI_ExecDialogBox(_comDialogCreate, GUI_COUNTOF(_comDialogCreate), &_comCallback, 0, 0, 0);
-	}
+    GUI_CreateDialogBox(_comDialogCreate, GUI_COUNTOF(_comDialogCreate), &_comCallback, 0, 0, 0);
 }
 

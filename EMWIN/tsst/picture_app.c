@@ -64,6 +64,8 @@ static void _cbPictureDialog(WM_MESSAGE * pMsg) {
 		  Path_Prosses(Now_Path);
 		  break;
 	  case WM_PAINT:
+		GUI_Clear();
+		GUI_SetBkColor(GUI_BLACK);
 		  if(strstr(Now_Path,".bmp")||
 			 strstr(Now_Path,".BMP")||
 			 strstr(Now_Path,".Bmp"))

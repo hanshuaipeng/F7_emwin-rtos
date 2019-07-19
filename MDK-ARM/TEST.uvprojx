@@ -1399,6 +1399,11 @@
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\comapp.c</FilePath>
             </File>
+            <File>
+              <FileName>qrcodeapp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\qrcodeapp.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

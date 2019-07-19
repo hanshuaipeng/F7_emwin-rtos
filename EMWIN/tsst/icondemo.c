@@ -13,6 +13,7 @@
 #include "use_app.h"
 #include "keypad.h"
 #include "comapp.h"
+#include "qrcodeapp.h"
 #define ID_ICONVIEW_0   (GUI_ID_USER + 0x01)
 
 uint8_t Document_ICON=0;
@@ -33,7 +34,7 @@ static const BITMAP_ITEM BitmapItemTab1[]={
 	{&bmpicture,	"图片"},
 	{&bmuse,	"使用率"},
 	{&bmcom,	"串口"},
-//	{&bmcompass,	"Compass"},
+	{&bmQRcode,	"二维码"},
 //	{&bmcompose,	"Cmpose"},
 //	{&bmdocument,	"Cument"},
 //	{&bmfolder,		"Folder"},
@@ -95,8 +96,10 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
                                     CreateUseAppwin();    //创建使用率
 									break;
 								case 5:	
-									comAppwin() ;
-									keypad_demo();		//创建串口
+									comAppwin() ;//创建串口
+								break;
+								case 6:	
+									QRcodeapp();		
 								break;
 							}
 							break;

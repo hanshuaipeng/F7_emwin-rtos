@@ -83,6 +83,10 @@ static void _cbDialog(WM_MESSAGE * pMsg) {
     // USER START (Optionally insert additional code for further widget initialization)
     // USER END
     break;
+	case WM_PAINT:
+		GUI_Clear();
+		GUI_SetBkColor(GUI_BLACK);
+		break;
   case WM_NOTIFY_PARENT:
     Id    = WM_GetId(pMsg->hWinSrc);
     NCode = pMsg->Data.v;

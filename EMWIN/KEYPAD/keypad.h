@@ -60,7 +60,7 @@ typedef struct
 	u8 signpad_num;						//·ûºÅ¼üÅÌµÄÊýÁ¿
 	
 } KEYPADStructTypeDef;
-
+extern KEYPADStructTypeDef keypad_dev;	
 
 #define COLOR_BACK0            0xFF3333
 #define COLOR_BACK1            0x550000
@@ -314,4 +314,5 @@ static GUI_CONST_STORAGE GUI_BITMAP bmReturn = {
 };
 
 void keypad_demo(void);
+void Delete_Pad(void);
 #endif
