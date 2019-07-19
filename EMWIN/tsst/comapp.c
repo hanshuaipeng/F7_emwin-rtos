@@ -163,6 +163,9 @@ static void _comCallback(WM_MESSAGE * pMsg)
 		case WM_DELETE:
 			WM_DeleteWindow(keypad_dev.hKeypad);//É¾³ý¼üÅÌ
 			break;
+		case WM_PID_STATE_CHANGED:
+			WM_DeleteWindow(keypad_dev.hKeypad);//É¾³ý¼üÅÌ
+			break;
         case WM_PAINT:
             PaintDialog(pMsg);
             break;
