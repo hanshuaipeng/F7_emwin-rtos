@@ -1,6 +1,6 @@
 #ifndef _SOFTWAREKEY_H
 #define _SOFTWAREKEY_H
-#include "sys.h"
+#include "mysys.h"
 #include "DIALOG.h"
 #include "pyinput.h"
 //////////////////////////////////////////////////////////////////////////////////	 

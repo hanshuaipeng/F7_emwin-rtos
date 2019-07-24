@@ -68,3 +68,15 @@ test\sdmmc.o: ../Inc/pcf8574.h
 test\sdmmc.o: ..\FATFS\exfuns\exfuns.h
 test\sdmmc.o: ..\Chinese\text_zh.h
 test\sdmmc.o: ..\Chinese\fontupd.h
+test\sdmmc.o: ../Inc/mysys.h
+test\sdmmc.o: ../Drivers/CMSIS/Include/core_cm7.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+test\sdmmc.o: ../Inc/FreeRTOSConfig.h
+test\sdmmc.o: ../Inc/tim.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/portmacro.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+test\sdmmc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

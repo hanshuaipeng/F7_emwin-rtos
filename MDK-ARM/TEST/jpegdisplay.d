@@ -1,6 +1,6 @@
 test\jpegdisplay.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.c
 test\jpegdisplay.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
-test\jpegdisplay.o: ..\EMWIN\sys.h
+test\jpegdisplay.o: ../Inc/mysys.h
 test\jpegdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\jpegdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\jpegdisplay.o: ../Drivers/CMSIS/Include/core_cm7.h

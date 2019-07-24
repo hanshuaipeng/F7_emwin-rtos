@@ -1,6 +1,6 @@
 test\gifdisplay.o: ..\EMWIN\EMWIN_PICTURE\GIF\gifdisplay.c
 test\gifdisplay.o: ..\EMWIN\EMWIN_PICTURE\GIF\gifdisplay.h
-test\gifdisplay.o: ..\EMWIN\sys.h
+test\gifdisplay.o: ../Inc/mysys.h
 test\gifdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\gifdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\gifdisplay.o: ../Drivers/CMSIS/Include/core_cm7.h

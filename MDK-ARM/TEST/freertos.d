@@ -129,7 +129,7 @@ test\freertos.o: ..\EMWIN\STemWin\inc\KNOB.h
 test\freertos.o: ..\EMWIN\tsst\icondemo.h
 test\freertos.o: ..\EMWIN\STemWinHZ\Hzfontupdata.h
 test\freertos.o: ..\EMWIN\EMWIN_PICTURE\PNG\pngdisplay.h
-test\freertos.o: ..\EMWIN\sys.h
+test\freertos.o: ../Inc/mysys.h
 test\freertos.o: ../Drivers/CMSIS/Include/core_cm7.h
 test\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 test\freertos.o: ../Inc/FreeRTOSConfig.h

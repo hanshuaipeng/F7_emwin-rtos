@@ -29,8 +29,7 @@
 #include "LISTVIEW.h"
 #include "EmWinHZFont.h"
 #include "keypad.h"
-
-
+#include "malloc.h"
 
 //EventsFunctionList
 void OnButtonReleased(WM_MESSAGE * pMsg);
@@ -77,7 +76,7 @@ static const GUI_WIDGET_CREATE_INFO _comDialogCreate[] = {
 
 void PaintDialog(WM_MESSAGE * pMsg)
 {
-    WM_HWIN hWin = pMsg->hWin;
+//    WM_HWIN hWin = pMsg->hWin;
 	GUI_Clear();
 	GUI_SetBkColor(GUI_BLACK);
 }
@@ -116,7 +115,8 @@ void InitDialog(WM_MESSAGE * pMsg)
 	MULTIEDIT_SetFont(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0), &GUI_FontHZ24);
 	MULTIEDIT_SetAutoScrollH(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
     MULTIEDIT_SetAutoScrollV(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
-	MULTIEDIT_SetReadOnly(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
+	MULTIEDIT_SetFocusable(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),0);
+//	MULTIEDIT_SetReadOnly(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
     //
     //GUI_ID_MULTIEDIT1
     //
@@ -158,12 +158,14 @@ static void _comCallback(WM_MESSAGE * pMsg)
 {
     int NCode, Id;
     WM_HWIN hWin = pMsg->hWin;
+	char *multiedit_data;
+	int data_len;
     switch (pMsg->MsgId) 
     {
 		case WM_DELETE:
 			WM_DeleteWindow(keypad_dev.hKeypad);//É¾³ý¼üÅÌ
 			break;
-		case WM_PID_STATE_CHANGED:
+		case WM_PID_STATE_CHANGED://µã»÷¿Õ°×É¾³ý¼üÅÌ
 			WM_DeleteWindow(keypad_dev.hKeypad);//É¾³ý¼üÅÌ
 			break;
         case WM_PAINT:
@@ -200,7 +202,6 @@ static void _comCallback(WM_MESSAGE * pMsg)
                     switch(NCode)
                     {
                         case WM_NOTIFICATION_RELEASED:
-//                            OnMultiEditSelChanged(pMsg);
 							WM_SetFocus(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1));
 						if(keypad_dev.hKeypad==NULL)//Èç¹ûÃ»ÓÐ´´½¨¼üÅÌ£¬´´½¨¼üÅÌ
 							keypad_demo();
@@ -235,7 +236,11 @@ static void _comCallback(WM_MESSAGE * pMsg)
                     switch(NCode)
                     {
                         case WM_NOTIFICATION_RELEASED:
-//                            OnButtonReleased(pMsg);
+								data_len=MULTIEDIT_GetTextSize(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1));									
+								mymalloc(SRAMIN,data_len);
+								MULTIEDIT_GetText(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),multiedit_data,data_len);
+								printf("%s\r\n",multiedit_data);
+								myfree(SRAMIN,multiedit_data);
                             break;
                     }
                     break;

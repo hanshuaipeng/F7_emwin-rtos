@@ -19,7 +19,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "sdmmc.h"
-
+#include "mysys.h"
 /* USER CODE BEGIN 0 */
 //SD_ReadDisk/SD_WriteDisk函数专用buf,当这两个函数的数据缓存区地址不是4字节对齐的时候,
 //需要用到该数组,确保数据缓存区地址是4字节对齐的.
@@ -280,18 +280,6 @@ void HAL_SD_RxCpltCallback(SD_HandleTypeDef *hsd)
 }
 #else
 
-//关闭所有中断(但是不包括fault和NMI中断)
-__asm void INTX_DISABLE(void)
-{
-	CPSID   I
-	BX      LR	  
-}
-//开启所有中断
-__asm void INTX_ENABLE(void)
-{
-	CPSIE   I
-	BX      LR  
-}
 //读SD卡
 //buf:读数据缓存区
 //sector:扇区地址

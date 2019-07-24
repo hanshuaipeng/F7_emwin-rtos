@@ -46,7 +46,7 @@ test\keypad.o: ..\EMWIN\STemWin\inc\TEXT.h
 test\keypad.o: ..\EMWIN\STemWin\inc\TREEVIEW.h
 test\keypad.o: ..\EMWIN\STemWin\inc\KNOB.h
 test\keypad.o: ..\EMWIN\KEYPAD\keypad.h
-test\keypad.o: ..\EMWIN\sys.h
+test\keypad.o: ../Inc/mysys.h
 test\keypad.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\keypad.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\keypad.o: ../Drivers/CMSIS/Include/core_cm7.h

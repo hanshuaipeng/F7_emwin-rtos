@@ -1,6 +1,6 @@
 test\bmpdisplay.o: ..\EMWIN\EMWIN_PICTURE\BMP\bmpdisplay.c
 test\bmpdisplay.o: ..\EMWIN\EMWIN_PICTURE\BMP\bmpdisplay.h
-test\bmpdisplay.o: ..\EMWIN\sys.h
+test\bmpdisplay.o: ../Inc/mysys.h
 test\bmpdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\bmpdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\bmpdisplay.o: ../Drivers/CMSIS/Include/core_cm7.h

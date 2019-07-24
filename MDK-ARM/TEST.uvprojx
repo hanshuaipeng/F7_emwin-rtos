@@ -507,6 +507,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\led.c</FilePath>
             </File>
+            <File>
+              <FileName>mysys.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\mysys.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

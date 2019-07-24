@@ -116,7 +116,7 @@ test\filewindow.o: ..\Chinese\fontupd.h
 test\filewindow.o: ..\EMWIN\STemWinHZ\EmWinHZFont.h
 test\filewindow.o: ..\EMWIN\tsst\document.h
 test\filewindow.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
-test\filewindow.o: ..\EMWIN\sys.h
+test\filewindow.o: ../Inc/mysys.h
 test\filewindow.o: ../Drivers/CMSIS/Include/core_cm7.h
 test\filewindow.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 test\filewindow.o: ../Inc/FreeRTOSConfig.h

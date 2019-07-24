@@ -1,6 +1,6 @@
 #ifndef _BMPDISPLAY_H
 #define _BMPDISPLAY_H
-#include "sys.h"
+#include "mysys.h"
 
 #define BMPMEMORYSIZE	(8*1024*1024)	//图片大小不大于8M
 

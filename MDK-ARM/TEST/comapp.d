@@ -48,7 +48,7 @@ test\comapp.o: ..\EMWIN\STemWin\inc\TREEVIEW.h
 test\comapp.o: ..\EMWIN\STemWin\inc\KNOB.h
 test\comapp.o: ..\EMWIN\STemWinHZ\EmWinHZFont.h
 test\comapp.o: ..\EMWIN\KEYPAD\keypad.h
-test\comapp.o: ..\EMWIN\sys.h
+test\comapp.o: ../Inc/mysys.h
 test\comapp.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\comapp.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\comapp.o: ../Drivers/CMSIS/Include/core_cm7.h

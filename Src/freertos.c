@@ -66,7 +66,7 @@ void touch_task(void *pvParameters);
 //设置任务优先级
 #define LED0_TASK_PRIO 			3
 //任务堆栈大小
-#define LED0_STK_SIZE			512
+#define LED0_STK_SIZE			256
 //任务句柄
 TaskHandle_t Led0Task_Handler;
 //led0任务
@@ -129,7 +129,7 @@ void start_task(void *pvParameters)
                 (TaskHandle_t*  )&Led0Task_Handler);  
     //创建EMWIN Demo任务
     xTaskCreate((TaskFunction_t )emwindemo_task,             
-                (const char*    )"emwindemo_task",           
+                (const char*    )"emwin_task",           
                 (uint16_t       )EMWINDEMO_STK_SIZE,        
                 (void*          )NULL,                  
                 (UBaseType_t    )EMWINDEMO_TASK_PRIO,        
@@ -169,13 +169,12 @@ void touch_task(void *pvParameters)
 //LED0任务
 void led0_task(void *p_arg)
 {
-	uint8_t CPU_RunInfo[400];
-	GUI_ALLOC_DATATYPE k;
-	GUI_ALLOC_INFO info;
+//	GUI_ALLOC_DATATYPE k;
+//	GUI_ALLOC_INFO info;
 	while(1)
 	{
-		GUI_ALLOC_GetMemInfo(&info);
-		printf("TotalBytes=%ld,UsedBytes=%ld\r\n",info.TotalBytes,info.UsedBytes);
+//		GUI_ALLOC_GetMemInfo(&info);
+//		printf("TotalBytes=%ld,UsedBytes=%ld\r\n",info.TotalBytes,info.UsedBytes);
 //		k=GUI_ALLOC_GetNumUsedBytes();
 //		printf("UsedBytes=%ld\r\n",k);
 //		memset(CPU_RunInfo,0,400); //信息缓冲区清零

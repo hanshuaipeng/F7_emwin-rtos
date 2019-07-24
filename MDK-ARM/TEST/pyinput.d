@@ -1,5 +1,5 @@
 test\pyinput.o: ..\T9INPUT\pyinput.c
-test\pyinput.o: ..\EMWIN\sys.h
+test\pyinput.o: ../Inc/mysys.h
 test\pyinput.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\pyinput.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\pyinput.o: ../Drivers/CMSIS/Include/core_cm7.h

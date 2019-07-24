@@ -19,6 +19,7 @@ Purpose     : Implementation of Proportional fonts
 
 #include <stddef.h>           /* needed for definition of NULL */
 #include "GUI_Private.h"
+#include "mysys.h"
 #include "ff.h"
 #include "fontupd.h"
 #include "w25q256.h"
@@ -61,7 +62,6 @@ static void GUI_GetDataFromMemory(const GUI_FONT_PROP GUI_UNI_PTR *pProp, U16P c
     uint8_t size,csize;//字体大小
     uint16_t BytesPerFont;
 	GUI_FONT EMWINFONT;
-	vTaskSuspendAll();         // 开启调度锁 
 	EMWINFONT = *GUI_pContext->pAFont;
     BytesPerFont = GUI_pContext->pAFont->YSize * pProp->paCharInfo->BytesPerLine; //每个字模的数据字节数
     if (BytesPerFont > BYTES_PER_FONT) BytesPerFont = BYTES_PER_FONT;
@@ -121,8 +121,7 @@ static void GUI_GetDataFromMemory(const GUI_FONT_PROP GUI_UNI_PTR *pProp, U16P c
 				W25QXX_Read(GUI_FontDataBuf,foffset+ftinfo.f32addr,csize);
 				break;
 		} 
-	} 
-	xTaskResumeAll();	        //调度器解锁  	
+	} 	
 }
 /*********************************************************************
 *

@@ -1,6 +1,6 @@
 test\pngdisplay.o: ..\EMWIN\EMWIN_PICTURE\PNG\pngdisplay.c
 test\pngdisplay.o: ..\EMWIN\EMWIN_PICTURE\PNG\pngdisplay.h
-test\pngdisplay.o: ..\EMWIN\sys.h
+test\pngdisplay.o: ../Inc/mysys.h
 test\pngdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\pngdisplay.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\pngdisplay.o: ../Drivers/CMSIS/Include/core_cm7.h

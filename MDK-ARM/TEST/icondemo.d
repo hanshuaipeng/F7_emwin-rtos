@@ -122,7 +122,7 @@ test\icondemo.o: ..\EMWIN\STemWinHZ\Hzfontupdata.h
 test\icondemo.o: ..\EMWIN\tsst\filewindow.h
 test\icondemo.o: ..\EMWIN\tsst\picture_app.h
 test\icondemo.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
-test\icondemo.o: ..\EMWIN\sys.h
+test\icondemo.o: ../Inc/mysys.h
 test\icondemo.o: ../Drivers/CMSIS/Include/core_cm7.h
 test\icondemo.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 test\icondemo.o: ../Inc/FreeRTOSConfig.h

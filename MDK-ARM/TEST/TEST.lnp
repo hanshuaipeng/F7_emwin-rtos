@@ -23,6 +23,7 @@
 "test\crc.o"
 "test\rgblcd.o"
 "test\led.o"
+"test\mysys.o"
 "test\stm32f7xx_hal_pcd.o"
 "test\stm32f7xx_hal_pcd_ex.o"
 "test\stm32f7xx_hal_cortex.o"

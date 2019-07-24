@@ -38,5 +38,14 @@ typedef __I uint32_t vuc32;
 typedef __I uint16_t vuc16; 
 typedef __I uint8_t vuc8;  
 
+
+
+u8 Get_ICahceSta(void);//判断I_Cache是否打开
+u8 Get_DCahceSta(void);//判断I_Dache是否打开
+//以下为汇编函数
+void WFI_SET(void);		//执行WFI指令
+void INTX_DISABLE(void);//关闭所有中断
+void INTX_ENABLE(void);	//开启所有中断
+void MSR_MSP(u32 addr);	//设置堆栈地址 
 #endif
 

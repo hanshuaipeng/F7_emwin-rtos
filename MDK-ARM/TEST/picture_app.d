@@ -47,7 +47,7 @@ test\picture_app.o: ..\EMWIN\STemWin\inc\TEXT.h
 test\picture_app.o: ..\EMWIN\STemWin\inc\TREEVIEW.h
 test\picture_app.o: ..\EMWIN\STemWin\inc\KNOB.h
 test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\PNG\pngdisplay.h
-test\picture_app.o: ..\EMWIN\sys.h
+test\picture_app.o: ../Inc/mysys.h
 test\picture_app.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\picture_app.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
 test\picture_app.o: ../Drivers/CMSIS/Include/core_cm7.h
