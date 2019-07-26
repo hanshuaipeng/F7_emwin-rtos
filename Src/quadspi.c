@@ -43,7 +43,7 @@ void MX_QUADSPI_Init(void)
   {
     Error_Handler();
   }
-
+	
 }
 
 void HAL_QSPI_MspInit(QSPI_HandleTypeDef* qspiHandle)
@@ -167,8 +167,18 @@ void QSPI_Send_CMD(uint32_t instruction,uint32_t address,uint32_t dummyCycles,ui
 uint8_t QSPI_Receive(uint8_t* buf,uint32_t datalen)
 {
     hqspi.Instance->DLR=datalen-1;                           //配置数据长度
-    if(HAL_QSPI_Receive(&hqspi,buf,5000)==HAL_OK) return 0;  //接收数据
-    else return 1;
+    if(HAL_QSPI_Receive(&hqspi,buf,5000)==HAL_OK) 
+	{
+		return 0;  //接收数据
+	}
+    else 
+	{
+		HAL_QSPI_MspDeInit(&hqspi);
+		MX_QUADSPI_Init();
+		W25QXX_Init();
+		QSPI_Receive(buf,datalen);
+	}
+	return 1;
 }
 
 //QSPI发送指定长度的数据
