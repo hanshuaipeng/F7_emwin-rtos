@@ -38,6 +38,8 @@ test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc_ex.h
 test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h
 test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h
 test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h
+test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc.h
+test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc_ex.h
 test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h
 test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h
 test\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
@@ -105,3 +107,6 @@ test\main.o: ..\EMWIN\STemWin\inc\GUI_Version.h
 test\main.o: ..\EMWIN\STemWin\inc\WM.h
 test\main.o: ..\EMWIN\STemWin\inc\WM_GUI.h
 test\main.o: ../Inc/led.h
+test\main.o: ../Inc/rtc.h
+test\main.o: ../Inc/mysys.h
+test\main.o: ../Drivers/CMSIS/Include/core_cm7.h

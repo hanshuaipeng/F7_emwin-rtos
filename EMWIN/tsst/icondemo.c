@@ -14,12 +14,16 @@
 #include "keypad.h"
 #include "comapp.h"
 #include "qrcodeapp.h"
+#include "rtc.h"
 #define ID_ICONVIEW_0   (GUI_ID_USER + 0x01)
-
+#define ID_TEXT1   		(GUI_ID_USER + 0x02)
+#define ID_TEXT2   		(GUI_ID_USER + 0x03)
 uint8_t Document_ICON=0;
 
 WM_HWIN IconviewWin;    //ICONVIEW控件窗口
-
+WM_HTIMER hTimer;
+TEXT_Handle TimeText_Handle;
+TEXT_Handle DataText_Handle;
 //app图标描述结构体
 typedef struct{
 	const GUI_BITMAP 	*pBitmap;   //app图标
@@ -32,10 +36,10 @@ static const BITMAP_ITEM BitmapItemTab1[]={
 	{&bmdocuments,	"文件浏览"},
 	{&bmHz_Update,	"字库更新"},
 	{&bmpicture,	"图片"},
-	{&bmuse,	"使用率"},
-	{&bmcom,	"串口"},
-	{&bmQRcode,	"二维码"},
-//	{&bmcompose,	"Cmpose"},
+	{&bmuse,		"使用率"},
+	{&bmcom,		"串口"},
+	{&bmQRcode,		"二维码"},
+	{&bmclock,		"时钟"},
 //	{&bmdocument,	"Cument"},
 //	{&bmfolder,		"Folder"},
 //	{&bmmail,		"Mail"},
@@ -55,10 +59,24 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 {
 	int Id;
 	int NCode;
+	RTC_TimeTypeDef RTC_TimeStruct;
+    RTC_DateTypeDef RTC_DateStruct;
 	static int Iconview0_Sel;
-	
+	static uint8_t i=0;
+	char tbuf[40];
 	switch(pMsg->MsgId)
 	{
+		case WM_TIMER:
+			HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
+			sprintf((char*)tbuf,"Date:20%02d-%02d-%02d Week:%d",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date,RTC_DateStruct.WeekDay); 
+//			printf("%s\r\n",tbuf);
+			TEXT_SetText(DataText_Handle,tbuf);
+			HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
+			sprintf((char*)tbuf,"Time:%02d:%02d:%02d",RTC_TimeStruct.Hours,RTC_TimeStruct.Minutes,RTC_TimeStruct.Seconds); 
+			TEXT_SetText(TimeText_Handle,tbuf);
+//			printf("%s\r\n",tbuf);
+			WM_RestartTimer(hTimer,1000);
+			break;
 		case WM_PAINT:
             GUI_SetBkColor(GUI_BLACK);
             GUI_Clear();                        
@@ -120,8 +138,12 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 void iconviewdemo(void) 
 {
 	int i;
-
 	WM_SetCallback(WM_HBKWIN,cb_BkWindow); //设置桌面窗口WM_HBKWIN的回调函数
+	hTimer=WM_CreateTimer(WM_HBKWIN,0,10,0);
+	DataText_Handle=TEXT_CreateEx(0,0,240,20,WM_HBKWIN, WM_CF_SHOW, 0, ID_TEXT1, NULL);
+	TimeText_Handle=TEXT_CreateEx(240,0,240,20,WM_HBKWIN, WM_CF_SHOW, 0, ID_TEXT2, NULL);
+	TEXT_SetFont(TimeText_Handle,&GUI_FontHZ16);
+	TEXT_SetFont(DataText_Handle,&GUI_FontHZ16);
 	//建立一个ICONVIEW作为主界面
 	IconviewWin=ICONVIEW_CreateEx(	0,0,                    //左上角坐标
 							480,272,                        //小工具的水平和垂直尺寸

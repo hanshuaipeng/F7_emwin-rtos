@@ -40,6 +40,7 @@
 #include "GUI.h"
 #include "WM.h"
 #include "led.h"
+#include "rtc.h"
 /* USER CODE END Includes */
 #define Write_Through() (*(__IO uint32_t*)0XE000EF9C=1UL<<2) //Cache透写模式
 
@@ -99,30 +100,31 @@ int main(void)
   /* USER CODE END 1 */
   
 
-  /* Enable I-Cache---------------------------------------------------------*/
-  Write_Through();				//强制cache透传
+	/* Enable I-Cache---------------------------------------------------------*/
+	Write_Through();				//强制cache透传
 	MPU_Memory_Protection();		//MPU内存保护配置
 	SCB_EnableICache();
 
-  /* Enable D-Cache---------------------------------------------------------*/
-  SCB_EnableDCache();
-  HAL_Init();
+	/* Enable D-Cache---------------------------------------------------------*/
+	SCB_EnableDCache();
+	HAL_Init();
 
-   SystemClock_Config();
+	SystemClock_Config();
+	RTC_Init();
+	RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次  
 	delay_init(216);				//延时函数初始化，时钟频率216M
-  MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_USART1_UART_Init();
-  MX_SDMMC1_SD_Init();
-  /* USER CODE BEGIN 2 */
-    SDRAM_Init();					//初始化SDRAM
+	MX_GPIO_Init();
+	MX_DMA_Init();
+	MX_USART1_UART_Init();
+	MX_SDMMC1_SD_Init();
+	/* USER CODE BEGIN 2 */
+	SDRAM_Init();					//初始化SDRAM
 	LTDC_LCD_Init();
 	W25QXX_Init();					//SPI FLASH初始化
-	
 	PCF8574_Init();				    //初始化PCF8574 
 	read_sdinfo();					//获取SD卡信息
 	USB_HOST_Init();				//USB
-						
+					
 	GT9147_Init();
 	my_mem_init(SRAMIN);		    //初始化内部内存池
 	my_mem_init(SRAMEX);		    //初始化外部内存池

@@ -512,6 +512,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\mysys.c</FilePath>
             </File>
+            <File>
+              <FileName>rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\rtc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -691,6 +696,16 @@
               <FileName>stm32f7xx_hal_jpeg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_jpeg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_hal_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f7xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rtc_ex.c</FilePath>
             </File>
           </Files>
         </Group>

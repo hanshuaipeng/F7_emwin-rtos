@@ -87,6 +87,8 @@ test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc_ex.h
 test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h
 test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h
 test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h
+test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc.h
+test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc_ex.h
 test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h
 test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h
 test\icondemo.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
@@ -139,3 +141,4 @@ test\icondemo.o: ..\EMWIN\KEYPAD\keypad.h
 test\icondemo.o: ..\T9INPUT\pyinput.h
 test\icondemo.o: ..\EMWIN\tsst\comapp.h
 test\icondemo.o: ..\EMWIN\tsst\qrcodeapp.h
+test\icondemo.o: ../Inc/rtc.h

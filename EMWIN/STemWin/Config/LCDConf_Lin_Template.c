@@ -344,7 +344,7 @@ DMA2D_HandleTypeDef DMA2D_Handler;   //DMA2D句柄
 static void LCD_LL_Init(void) 
 {
     //LTDC中断，抢占优先级1，子优先级1
-    HAL_NVIC_SetPriority(LTDC_IRQn,1,1);    
+    HAL_NVIC_SetPriority(LTDC_IRQn,1,0);    
     HAL_NVIC_EnableIRQ(LTDC_IRQn);
     HAL_LTDC_ProgramLineEvent(&hltdc,0);//开启LTDC的行中断
     __HAL_RCC_LTDC_CLK_ENABLE();

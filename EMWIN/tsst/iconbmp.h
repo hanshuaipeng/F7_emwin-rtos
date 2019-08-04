@@ -11,6 +11,7 @@ extern GUI_CONST_STORAGE GUI_BITMAP bmpicture;
 extern GUI_CONST_STORAGE GUI_BITMAP bmuse;
 extern GUI_CONST_STORAGE GUI_BITMAP bmcom;
 extern GUI_CONST_STORAGE GUI_BITMAP bmQRcode;
+extern GUI_CONST_STORAGE GUI_BITMAP bmclock;
 #endif
 
 

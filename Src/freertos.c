@@ -56,7 +56,7 @@ void start_task(void *pvParameters);
 //设置任务优先级
 #define TOUCH_TASK_PRIO			2
 //任务堆栈大小
-#define TOUCH_STK_SIZE			512
+#define TOUCH_STK_SIZE			256
 //任务句柄
 TaskHandle_t TouchTask_Handler;
 //touch任务
@@ -169,31 +169,14 @@ void touch_task(void *pvParameters)
 //LED0任务
 void led0_task(void *p_arg)
 {
-//	GUI_ALLOC_DATATYPE k;
-//	GUI_ALLOC_INFO info;
+	GUI_ALLOC_DATATYPE k;
+	GUI_ALLOC_INFO info;
 	while(1)
 	{
-//		GUI_ALLOC_GetMemInfo(&info);
-//		printf("TotalBytes=%ld,UsedBytes=%ld\r\n",info.TotalBytes,info.UsedBytes);
-//		k=GUI_ALLOC_GetNumUsedBytes();
-//		printf("UsedBytes=%ld\r\n",k);
-//		memset(CPU_RunInfo,0,400); //信息缓冲区清零
-
-//		vTaskList((char *)&CPU_RunInfo); //获取任务运行时间信息
-
-//		printf("---------------------------------------------------------\r\n");
-//		printf("任务名      任务状态      优先级      剩余栈     任务序号\r\n");
-//		printf("%s", CPU_RunInfo);
-//		printf("---------------------------------------------------------\r\n");
-
-//		memset(CPU_RunInfo,0,400); //信息缓冲区清零
-
-//		vTaskGetRunTimeStats((char *)&CPU_RunInfo);
-
-//		printf("任务名            运行计数            使用率\r\n");
-//		printf("%s", CPU_RunInfo);
-//		printf("-------------------------------------------------------\r\n\n");
-
+		GUI_ALLOC_GetMemInfo(&info);
+		printf("TotalBytes=%ld,UsedBytes=%ld\r\n",info.TotalBytes,info.UsedBytes);
+		k=GUI_ALLOC_GetNumUsedBytes();
+		printf("UsedBytes=%ld\r\n",k);
 		HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
 		vTaskDelay(1000);		//延时1000ms
 	}
