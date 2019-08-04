@@ -175,8 +175,6 @@ void led0_task(void *p_arg)
 	{
 		GUI_ALLOC_GetMemInfo(&info);
 		printf("TotalBytes=%ld,UsedBytes=%ld\r\n",info.TotalBytes,info.UsedBytes);
-		k=GUI_ALLOC_GetNumUsedBytes();
-		printf("UsedBytes=%ld\r\n",k);
 		HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
 		vTaskDelay(1000);		//—” ±1000ms
 	}

@@ -1424,6 +1424,11 @@
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\qrcodeapp.c</FilePath>
             </File>
+            <File>
+              <FileName>clockapp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\clockapp.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

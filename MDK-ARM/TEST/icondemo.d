@@ -142,3 +142,4 @@ test\icondemo.o: ..\T9INPUT\pyinput.h
 test\icondemo.o: ..\EMWIN\tsst\comapp.h
 test\icondemo.o: ..\EMWIN\tsst\qrcodeapp.h
 test\icondemo.o: ../Inc/rtc.h
+test\icondemo.o: ..\EMWIN\tsst\clockapp.h

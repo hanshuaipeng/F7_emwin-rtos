@@ -880,7 +880,7 @@ I (../Inc/pcf8574.h)(0x5CE8D946)
 I (..\FATFS\exfuns\exfuns.h)(0x5CE8D946)
 I (..\Chinese\text_zh.h)(0x5CE8E5E2)
 I (..\Chinese\fontupd.h)(0x5CE8D943)
-F (../Src/freertos.c)(0x5D46AA1A)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\FATFS\src -I ..\USB\STM32_USB_Host_Library\Core\Inc -I ..\USB -I ..\USB\STM32_USB_Host_Library\Class\MSC\Inc -I ..\FATFS\exfuns -I ..\Chinese -I ..\TOUCH -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1 -I ..\Drivers\CMSIS\DSP\Include -I ..\EMWIN\STemWin\Config -I ..\EMWIN\STemWin\inc -I ..\EMWIN\DEMO -I ..\EMWIN\tsst -I ..\EMWIN\STemWinHZ -I ..\EMWIN\HZDEMO -I ..\EMWIN\JPEG -I ..\EMWIN\EMWIN_PICTURE\BMP -I ..\EMWIN\EMWIN_PICTURE\GIF -I ..\EMWIN\EMWIN_PICTURE\JPEG -I ..\EMWIN\EMWIN_PICTURE\PNG -I ..\EMWIN -I ..\EMWIN\STemWinPNG -I ..\EMWIN\KEYPAD -I ..\T9INPUT-I.\RTE\_TEST-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F767xx -DUSE_HAL_DRIVER -DSTM32F767xx -DUSE_USB_FS-o test\freertos.o --omf_browse test\freertos.crf --depend test\freertos.d)
+F (../Src/freertos.c)(0x5D46B7DF)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\FATFS\src -I ..\USB\STM32_USB_Host_Library\Core\Inc -I ..\USB -I ..\USB\STM32_USB_Host_Library\Class\MSC\Inc -I ..\FATFS\exfuns -I ..\Chinese -I ..\TOUCH -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1 -I ..\Drivers\CMSIS\DSP\Include -I ..\EMWIN\STemWin\Config -I ..\EMWIN\STemWin\inc -I ..\EMWIN\DEMO -I ..\EMWIN\tsst -I ..\EMWIN\STemWinHZ -I ..\EMWIN\HZDEMO -I ..\EMWIN\JPEG -I ..\EMWIN\EMWIN_PICTURE\BMP -I ..\EMWIN\EMWIN_PICTURE\GIF -I ..\EMWIN\EMWIN_PICTURE\JPEG -I ..\EMWIN\EMWIN_PICTURE\PNG -I ..\EMWIN -I ..\EMWIN\STemWinPNG -I ..\EMWIN\KEYPAD -I ..\T9INPUT-I.\RTE\_TEST-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F767xx -DUSE_HAL_DRIVER -DSTM32F767xx -DUSE_USB_FS-o test\freertos.o --omf_browse test\freertos.crf --depend test\freertos.d)
 I (../Inc/main.h)(0x5CF375A8)
 I (../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h)(0x5CE8D945)
 I (../Inc/stm32f7xx_hal_conf.h)(0x5D454621)
@@ -7252,7 +7252,7 @@ I (..\EMWIN\STemWin\inc\LCD.h)(0x5CA66564)
 I (..\EMWIN\STemWin\inc\Global.h)(0x5CA66564)
 I (..\EMWIN\STemWin\inc\GUI_Version.h)(0x5CA66564)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
-F (..\EMWIN\tsst\icondemo.c)(0x5D46AFDE)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\FATFS\src -I ..\USB\STM32_USB_Host_Library\Core\Inc -I ..\USB -I ..\USB\STM32_USB_Host_Library\Class\MSC\Inc -I ..\FATFS\exfuns -I ..\Chinese -I ..\TOUCH -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1 -I ..\Drivers\CMSIS\DSP\Include -I ..\EMWIN\STemWin\Config -I ..\EMWIN\STemWin\inc -I ..\EMWIN\DEMO -I ..\EMWIN\tsst -I ..\EMWIN\STemWinHZ -I ..\EMWIN\HZDEMO -I ..\EMWIN\JPEG -I ..\EMWIN\EMWIN_PICTURE\BMP -I ..\EMWIN\EMWIN_PICTURE\GIF -I ..\EMWIN\EMWIN_PICTURE\JPEG -I ..\EMWIN\EMWIN_PICTURE\PNG -I ..\EMWIN -I ..\EMWIN\STemWinPNG -I ..\EMWIN\KEYPAD -I ..\T9INPUT-I.\RTE\_TEST-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F767xx -DUSE_HAL_DRIVER -DSTM32F767xx -DUSE_USB_FS-o test\icondemo.o --omf_browse test\icondemo.crf --depend test\icondemo.d)
+F (..\EMWIN\tsst\icondemo.c)(0x5D46B6BD)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\FATFS\src -I ..\USB\STM32_USB_Host_Library\Core\Inc -I ..\USB -I ..\USB\STM32_USB_Host_Library\Class\MSC\Inc -I ..\FATFS\exfuns -I ..\Chinese -I ..\TOUCH -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1 -I ..\Drivers\CMSIS\DSP\Include -I ..\EMWIN\STemWin\Config -I ..\EMWIN\STemWin\inc -I ..\EMWIN\DEMO -I ..\EMWIN\tsst -I ..\EMWIN\STemWinHZ -I ..\EMWIN\HZDEMO -I ..\EMWIN\JPEG -I ..\EMWIN\EMWIN_PICTURE\BMP -I ..\EMWIN\EMWIN_PICTURE\GIF -I ..\EMWIN\EMWIN_PICTURE\JPEG -I ..\EMWIN\EMWIN_PICTURE\PNG -I ..\EMWIN -I ..\EMWIN\STemWinPNG -I ..\EMWIN\KEYPAD -I ..\T9INPUT-I.\RTE\_TEST-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F767xx -DUSE_HAL_DRIVER -DSTM32F767xx -DUSE_USB_FS-o test\icondemo.o --omf_browse test\icondemo.crf --depend test\icondemo.d)
 I (..\EMWIN\tsst\icondemo.h)(0x5CF23DFC)
 I (..\EMWIN\STemWin\inc\GUI.h)(0x5CA66564)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
@@ -7391,6 +7391,7 @@ I (..\T9INPUT\pyinput.h)(0x5D36E125)
 I (..\EMWIN\tsst\comapp.h)(0x5D1F2762)
 I (..\EMWIN\tsst\qrcodeapp.h)(0x5D299739)
 I (../Inc/rtc.h)(0x5D45486D)
+I (..\EMWIN\tsst\clockapp.h)(0x5D46B6BD)
 F (..\EMWIN\tsst\backgroud.c)(0x5D19F0CB)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\FATFS\src -I ..\USB\STM32_USB_Host_Library\Core\Inc -I ..\USB -I ..\USB\STM32_USB_Host_Library\Class\MSC\Inc -I ..\FATFS\exfuns -I ..\Chinese -I ..\TOUCH -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1 -I ..\Drivers\CMSIS\DSP\Include -I ..\EMWIN\STemWin\Config -I ..\EMWIN\STemWin\inc -I ..\EMWIN\DEMO -I ..\EMWIN\tsst -I ..\EMWIN\STemWinHZ -I ..\EMWIN\HZDEMO -I ..\EMWIN\JPEG -I ..\EMWIN\EMWIN_PICTURE\BMP -I ..\EMWIN\EMWIN_PICTURE\GIF -I ..\EMWIN\EMWIN_PICTURE\JPEG -I ..\EMWIN\EMWIN_PICTURE\PNG -I ..\EMWIN -I ..\EMWIN\STemWinPNG -I ..\EMWIN\KEYPAD -I ..\T9INPUT-I.\RTE\_TEST-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F767xx -DUSE_HAL_DRIVER -DSTM32F767xx -DUSE_USB_FS-o test\backgroud.o --omf_browse test\backgroud.crf --depend test\backgroud.d)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599ECD2C)
 I (..\EMWIN\tsst\iconbmp.h)(0x5D457CBA)
@@ -8169,6 +8170,53 @@ F (..\EMWIN\tsst\qrcodeapp.c)(0x5D36E38B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MIC
 I (..\EMWIN\tsst\qrcodeapp.h)(0x5D299739)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (..\EMWIN\STemWin\inc\GUI.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\GUI_ConfDefaults.h)(0x5CA66564)
+I (..\EMWIN\STemWin\Config\GUIConf.h)(0x5CF20F12)
+I (..\EMWIN\STemWin\inc\GUI_Type.h)(0x5D1895EF)
+I (..\EMWIN\STemWin\inc\LCD.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\Global.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\GUI_Version.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\DIALOG.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\WM.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\WM_GUI.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\BUTTON.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\DIALOG_Intern.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\WIDGET.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\WM_Intern.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\GUI_Private.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\LCD_Protected.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\GUI_Debug.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\SCROLLBAR.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\CALENDAR.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\CHECKBOX.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\CHOOSECOLOR.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\CHOOSEFILE.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\DROPDOWN.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\LISTBOX.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\EDIT.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\FRAMEWIN.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\GRAPH.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\HEADER.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\ICONVIEW.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\IMAGE.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\LISTVIEW.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\LISTWHEEL.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\MENU.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\MULTIEDIT.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\MULTIPAGE.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\PROGBAR.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\RADIO.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\SLIDER.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\SPINBOX.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\SWIPELIST.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\TEXT.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\TREEVIEW.h)(0x5CA66564)
+I (..\EMWIN\STemWin\inc\KNOB.h)(0x5CA66564)
+I (..\EMWIN\STemWinHZ\EmWinHZFont.h)(0x5CF644E3)
+F (..\EMWIN\tsst\clockapp.c)(0x5D46B76B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc -I ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I ../Drivers/CMSIS/Include -I ..\FATFS\src -I ..\USB\STM32_USB_Host_Library\Core\Inc -I ..\USB -I ..\USB\STM32_USB_Host_Library\Class\MSC\Inc -I ..\FATFS\exfuns -I ..\Chinese -I ..\TOUCH -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1 -I ..\Drivers\CMSIS\DSP\Include -I ..\EMWIN\STemWin\Config -I ..\EMWIN\STemWin\inc -I ..\EMWIN\DEMO -I ..\EMWIN\tsst -I ..\EMWIN\STemWinHZ -I ..\EMWIN\HZDEMO -I ..\EMWIN\JPEG -I ..\EMWIN\EMWIN_PICTURE\BMP -I ..\EMWIN\EMWIN_PICTURE\GIF -I ..\EMWIN\EMWIN_PICTURE\JPEG -I ..\EMWIN\EMWIN_PICTURE\PNG -I ..\EMWIN -I ..\EMWIN\STemWinPNG -I ..\EMWIN\KEYPAD -I ..\T9INPUT-I.\RTE\_TEST-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F767xx -DUSE_HAL_DRIVER -DSTM32F767xx -DUSE_USB_FS-o test\clockapp.o --omf_browse test\clockapp.crf --depend test\clockapp.d)
+I (..\EMWIN\tsst\clockapp.h)(0x5D46B6BD)
+I (..\EMWIN\STemWin\inc\GUI.h)(0x5CA66564)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599ECD2C)
 I (..\EMWIN\STemWin\inc\GUI_ConfDefaults.h)(0x5CA66564)
 I (..\EMWIN\STemWin\Config\GUIConf.h)(0x5CF20F12)
 I (..\EMWIN\STemWin\inc\GUI_Type.h)(0x5D1895EF)

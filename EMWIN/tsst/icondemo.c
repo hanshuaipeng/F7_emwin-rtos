@@ -15,6 +15,7 @@
 #include "comapp.h"
 #include "qrcodeapp.h"
 #include "rtc.h"
+#include "clockapp.h"
 #define ID_ICONVIEW_0   (GUI_ID_USER + 0x01)
 #define ID_TEXT1   		(GUI_ID_USER + 0x02)
 #define ID_TEXT2   		(GUI_ID_USER + 0x03)
@@ -118,6 +119,9 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 								break;
 								case 6:	
 									QRcodeapp();		
+								break;
+								case 7:	
+									CreateClockAPP();		
 								break;
 							}
 							break;
