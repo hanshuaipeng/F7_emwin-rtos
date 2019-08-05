@@ -1429,6 +1429,16 @@
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\clockapp.c</FilePath>
             </File>
+            <File>
+              <FileName>clockapp_usepic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\clockapp_usepic.c</FilePath>
+            </File>
+            <File>
+              <FileName>setclock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\setclock.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

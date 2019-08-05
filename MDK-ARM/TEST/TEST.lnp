@@ -148,6 +148,8 @@
 "test\comapp.o"
 "test\qrcodeapp.o"
 "test\clockapp.o"
+"test\clockapp_usepic.o"
+"test\setclock.o"
 --library_type=microlib --strict --scatter "TEST\TEST.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -60,8 +60,6 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 {
 	int Id;
 	int NCode;
-	RTC_TimeTypeDef RTC_TimeStruct;
-    RTC_DateTypeDef RTC_DateStruct;
 	static int Iconview0_Sel;
 	static uint8_t i=0;
 	char tbuf[40];
@@ -121,7 +119,8 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 									QRcodeapp();		
 								break;
 								case 7:	
-									CreateClockAPP();		
+//									CreateClockAPP();	
+									App_Calendar(WM_HBKWIN);								
 								break;
 							}
 							break;

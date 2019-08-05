@@ -3,7 +3,9 @@
 #include "led.h"
 
 RTC_HandleTypeDef RTC_Handler;  //RTC句柄
-
+RTC_TimeTypeDef RTC_TimeStruct;
+RTC_DateTypeDef RTC_DateStruct;
+RTC_AlarmTypeDef RTC_AlarmStruct;
 //RTC时间设置
 //hour,min,sec:小时,分钟,秒钟
 //ampm:@RTC_AM_PM_Definitions:RTC_HOURFORMAT12_AM/RTC_HOURFORMAT12_PM
