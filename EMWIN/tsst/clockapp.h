@@ -4,7 +4,7 @@
 #include "DIALOG.h"
 
 //void CreateClockAPP(void) ;
-void App_Calendar(WM_HWIN hWin) ;
+void App_Calendar(void) ;
 #endif
 
 

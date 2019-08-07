@@ -32,8 +32,6 @@
 #define ID_SPINBOX_3  (GUI_ID_USER + 0x04)
 #define ID_SPINBOX_4  (GUI_ID_USER + 0x05)
 #define ID_SPINBOX_5  (GUI_ID_USER + 0x06)
-#define ID_CALENDAR0  (GUI_ID_USER + 0x07)
-
 /*
 *********************************************************************************************************
 *                                        变量
@@ -75,24 +73,24 @@ const char *apMonths[]=
 */
 static const GUI_WIDGET_CREATE_INFO _aDialogCreateSetTimeAlarm[] = {
     { WINDOW_CreateIndirect,  "Time Settings",        	0,                     0,  0,  480,272,0,0},
-    { TEXT_CreateIndirect,      "时间设置",          GUI_ID_TEXT0,            68, 14, 73, 20, 0,0},
-    { TEXT_CreateIndirect,      "闹钟设置",          GUI_ID_TEXT1,            188,14, 73, 20, 0,0},
-    { CHECKBOX_CreateIndirect,  "保存时间设置",  	 GUI_ID_CHECK0,           48,162,210,24, 0,0},
-	{ CHECKBOX_CreateIndirect,  "保存闹钟设置",   	 GUI_ID_CHECK1,           168,162,210,24, 0,0},
-	{ CHECKBOX_CreateIndirect,  "保存年月日设置",    GUI_ID_CHECK2,           300,162,210,24, 0,0},
-    { TEXT_CreateIndirect,      "时:",               GUI_ID_TEXT2,            24, 24, 29, 20, 0,0},
-    { TEXT_CreateIndirect,      "分:",               GUI_ID_TEXT3,            24, 63+15,29, 20, 0,0},
-    { TEXT_CreateIndirect,      "秒:",               GUI_ID_TEXT4,            24, 93+30,29, 20, 0,0},
+    { TEXT_CreateIndirect,      "时间设置",          GUI_ID_TEXT0,            76, 7,  101,29, 0,0},
+    { TEXT_CreateIndirect,      "闹钟设置",          GUI_ID_TEXT1,            204,8,  97, 29, 0,0},
+    { CHECKBOX_CreateIndirect,  "保存时间设置",  	 GUI_ID_CHECK0,           55, 165,101,18, 0,0},
+	{ CHECKBOX_CreateIndirect,  "保存闹钟设置",   	 GUI_ID_CHECK1,           183,165,101,18, 0,0},
+	{ CHECKBOX_CreateIndirect,  "保存年月日设置",    GUI_ID_CHECK2,           326,165,101,18, 0,0},
+    { TEXT_CreateIndirect,      "时:",               GUI_ID_TEXT2,            21, 42, 34, 30, 0,0},
+    { TEXT_CreateIndirect,      "分:",               GUI_ID_TEXT3,            21, 78, 34, 30, 0,0},
+    { TEXT_CreateIndirect,      "秒:",               GUI_ID_TEXT4,            21, 114,34, 30, 0,0},
 	
-	{ BUTTON_CreateIndirect, "Button", GUI_ID_BUTTON0, 120, 24, 100, 45, 0, 0x0, 0 },
-	{ BUTTON_CreateIndirect, "Button", GUI_ID_BUTTON1, 300, 24, 100, 45, 0, 0x0, 0 },
+	{ BUTTON_CreateIndirect, "Button", GUI_ID_BUTTON0,  55, 213,101,29, 0,0,0 },
+	{ BUTTON_CreateIndirect, "Button", GUI_ID_BUTTON1, 183,213,101,29, 0,0,0 },
 
-	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_0, 48, 33, 130, 35, 0, 0x0, 0 },
-	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_1, 48, 62 + 15, 130, 35, 0, 0x0, 0 },
-	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_2, 48, 90 + 30, 130, 35, 0, 0x0, 0 },
-	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_3, 168, 33, 130, 35, 0, 0x0, 0 },
-	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_4, 168, 63 + 15, 130, 35, 0, 0x0, 0 },
-	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_5, 168, 93 + 30, 130, 35, 0, 0x0, 0 },
+	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_0, 55, 36, 101,31, 0,0,0 },
+	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_1, 55, 73, 101,31, 0,0,0 },
+	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_2, 55, 110,101,31, 0,0,0 },
+	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_3, 183,36, 101,31, 0,0,0 },
+	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_4, 183,73, 101,31, 0,0,0 },
+	{ SPINBOX_CreateIndirect, "Spinbox", ID_SPINBOX_5, 183,110,101,31, 0,0,0 },
 };
 /*
 *********************************************************************************************************
@@ -184,28 +182,28 @@ void InitDialogSetTimeAlarm(WM_MESSAGE * pMsg)
 {
     WM_HWIN hWin = pMsg->hWin;
 	
-	/* 日历控件初始化 */
-	CALENDAR_SetDefaultSize(CALENDAR_SI_HEADER, 35 );
-	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_X, 40 );
-	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_Y, 28 );
+//	/* 日历控件初始化 */
+//	CALENDAR_SetDefaultSize(CALENDAR_SI_HEADER, 35 );
+//	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_X, 20 );
+//	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_Y, 20 );
 
-	CALENDAR_SetDefaultFont(CALENDAR_FI_CONTENT, &GUI_FontHZ16);
-	CALENDAR_SetDefaultFont(CALENDAR_FI_HEADER, &GUI_FontHZ16); 
-	CALENDAR_SetDefaultBkColor(CALENDAR_CI_WEEKDAY, 0xFF00FF);
-	
-	CALENDAR_SetDefaultDays(apDays);
-	CALENDAR_SetDefaultMonths(apMonths);
+//	CALENDAR_SetDefaultFont(CALENDAR_FI_CONTENT, &GUI_FontHZ16);
+//	CALENDAR_SetDefaultFont(CALENDAR_FI_HEADER, &GUI_FontHZ16); 
+//	CALENDAR_SetDefaultBkColor(CALENDAR_CI_WEEKDAY, 0xFF00FF);
+//	
+//	CALENDAR_SetDefaultDays(apDays);
+//	CALENDAR_SetDefaultMonths(apMonths);
 
 	HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
-	CALENDAR_Create(hWin, 
-	                 270, 
-	                 22, 
-	                 RTC_DateStruct.Year+2000, 
-	                 RTC_DateStruct.Month, 
-					 RTC_DateStruct.Date,
-					 2,
-					 ID_CALENDAR0, 
-					 WM_CF_SHOW);
+//	CALENDAR_Create(hWin, 
+//	                 340, 
+//	                 97,  
+//	                 RTC_DateStruct.Year+2000, 
+//	                 RTC_DateStruct.Month, 
+//					 RTC_DateStruct.Date,
+//					 2,
+//					 GUI_ID_CALENDAR0, 
+//					 WM_CF_SHOW);
 
 	/* 文本控件初始化 */
     TEXT_SetFont(WM_GetDialogItem(hWin,GUI_ID_TEXT0), &GUI_FontHZ16);
@@ -406,17 +404,16 @@ static void _cbCallbackSetTimeAlarm(WM_MESSAGE * pMsg)
 *	返 回 值: 无
 *********************************************************************************************************
 */
-void App_CalendarChild(WM_HWIN hWin) 
+void App_CalendarChild(void) 
 {
 	WM_HWIN hWinAlarm; 
     
 	hWinAlarm = GUI_CreateDialogBox(_aDialogCreateSetTimeAlarm, 
 	                                GUI_COUNTOF(_aDialogCreateSetTimeAlarm), 
 	                                &_cbCallbackSetTimeAlarm, 
-	                                hWin, 
+	                                0, 
 	                                0, 
 	                                0);
-	
 	/* 设置为模态窗口 */
 	WM_MakeModal(hWinAlarm);
 }

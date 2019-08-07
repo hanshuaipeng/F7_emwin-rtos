@@ -120,7 +120,7 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 								break;
 								case 7:	
 //									CreateClockAPP();	
-									App_Calendar(WM_HBKWIN);								
+									App_Calendar();								
 								break;
 							}
 							break;
