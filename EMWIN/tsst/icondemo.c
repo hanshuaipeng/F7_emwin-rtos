@@ -122,6 +122,7 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 //									CreateClockAPP();	
 									App_Calendar();								
 								break;
+								default:break;
 							}
 							break;
 						case WM_NOTIFICATION_SEL_CHANGED:
@@ -142,7 +143,7 @@ void iconviewdemo(void)
 {
 	int i;
 	WM_SetCallback(WM_HBKWIN,cb_BkWindow); //设置桌面窗口WM_HBKWIN的回调函数
-	hTimer=WM_CreateTimer(WM_HBKWIN,0,10,0);
+//	hTimer=WM_CreateTimer(WM_HBKWIN,0,10,0);
 	DataText_Handle=TEXT_CreateEx(0,0,240,20,WM_HBKWIN, WM_CF_SHOW, 0, ID_TEXT1, NULL);
 	TimeText_Handle=TEXT_CreateEx(240,0,240,20,WM_HBKWIN, WM_CF_SHOW, 0, ID_TEXT2, NULL);
 	TEXT_SetFont(TimeText_Handle,&GUI_FontHZ16);

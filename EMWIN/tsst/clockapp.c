@@ -245,16 +245,17 @@ static void Clock_DrawDisp(void)
 	Param.Angle2 *= 3.1415926f / 180;
 	GUI_RotatePolygon(Param.aPoints2, _aNeedle2, countof(_aNeedle2), Param.Angle2);
 						
-
-	GUI_DrawBitmap(&abmclock, 310, 120);
+	//abmclock大小为(180*180)
+	GUI_DrawBitmap(&abmclock, 150, 72);
 		
 	/* 使能抗锯齿，多任务的情况下，此函数一定要实时调用，比如截图任务切换回来就出错了 */
 	GUI_AA_EnableHiRes();
 	
 	GUI_SetColor(GUI_RED);
-	GUI_AA_FillPolygon(Param.aPoints, countof(_aNeedle), MAG * 400, MAG * 210);
-	GUI_AA_FillPolygon(Param.aPoints1, countof(_aNeedle1), MAG * 400, MAG * 210);
-	GUI_AA_FillPolygon(Param.aPoints2, countof(_aNeedle2), MAG * 400, MAG * 210);
+	//指针中心坐标(240,162)
+	GUI_AA_FillPolygon(Param.aPoints, countof(_aNeedle), MAG * 240, MAG * 162);
+	GUI_AA_FillPolygon(Param.aPoints1, countof(_aNeedle1), MAG * 240, MAG * 162);
+	GUI_AA_FillPolygon(Param.aPoints2, countof(_aNeedle2), MAG * 240, MAG * 162);
 }
 
 /*
@@ -332,7 +333,7 @@ void InitDialogRTC(WM_MESSAGE * pMsg)
     WM_HWIN hWin = pMsg->hWin;
 	WM_HWIN hItem;
 	
-	WM_CreateTimer(hWin, 0, 10, 0);						
+	WM_CreateTimer(hWin, 1, 10, 0);						
 	hItem = WM_GetDialogItem(pMsg->hWin, ID_BUTTON_0);
 	WM_SetHasTrans(hItem);
 	WM_SetCallback(hItem, _cbButtonBack);
@@ -366,7 +367,7 @@ static void _cbCallbackRTC(WM_MESSAGE * pMsg)
 {
     int NCode, Id;
     WM_HWIN hWin = pMsg->hWin;
- 	GUI_RECT rRTC={310, 120, 490, 300};
+ 	GUI_RECT rRTC={150, 72, 330, 252};
 	
     switch (pMsg->MsgId) 
     {

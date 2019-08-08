@@ -182,7 +182,7 @@ void InitDialogSetTimeAlarm(WM_MESSAGE * pMsg)
 {
     WM_HWIN hWin = pMsg->hWin;
 	
-//	/* 日历控件初始化 */
+	/* 日历控件初始化 */
 //	CALENDAR_SetDefaultSize(CALENDAR_SI_HEADER, 35 );
 //	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_X, 20 );
 //	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_Y, 20 );
@@ -194,7 +194,7 @@ void InitDialogSetTimeAlarm(WM_MESSAGE * pMsg)
 //	CALENDAR_SetDefaultDays(apDays);
 //	CALENDAR_SetDefaultMonths(apMonths);
 
-	HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
+//	HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
 //	CALENDAR_Create(hWin, 
 //	                 340, 
 //	                 97,  
@@ -203,7 +203,7 @@ void InitDialogSetTimeAlarm(WM_MESSAGE * pMsg)
 //					 RTC_DateStruct.Date,
 //					 2,
 //					 GUI_ID_CALENDAR0, 
-//					 WM_CF_SHOW);
+//					 WM_CF_HASTRANS);
 
 	/* 文本控件初始化 */
     TEXT_SetFont(WM_GetDialogItem(hWin,GUI_ID_TEXT0), &GUI_FontHZ16);
@@ -329,6 +329,7 @@ static void _cbCallbackSetTimeAlarm(WM_MESSAGE * pMsg)
 							/* 是否保存闹钟时间设置 */
 							if(CHECKBOX_GetState(WM_GetDialogItem(hWin,GUI_ID_CHECK1)) == 1)
 							{
+//								RTC_Set_AlarmA();
 								/* 禁能 Alarm A */
 //								RTC_AlarmCmd(RTC_Alarm_A, DISABLE);
 //								RTC_AlarmStructure.RTC_AlarmTime.RTC_H12     = RTC_H12_AM;
