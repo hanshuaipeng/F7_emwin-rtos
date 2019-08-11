@@ -143,3 +143,4 @@ test\icondemo.o: ..\EMWIN\tsst\comapp.h
 test\icondemo.o: ..\EMWIN\tsst\qrcodeapp.h
 test\icondemo.o: ../Inc/rtc.h
 test\icondemo.o: ..\EMWIN\tsst\clockapp.h
+test\icondemo.o: ..\EMWIN\tsst\warndialog.h

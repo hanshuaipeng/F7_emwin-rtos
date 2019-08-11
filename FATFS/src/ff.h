@@ -279,7 +279,7 @@ typedef enum {
 
 /*--------------------------------------------------------------*/
 /* FatFs module application interface                           */
-
+FRESULT dir_sdi (DIR *p,DWORD ofs);					//此处为自行添加的,用于方便查找上一个文件.
 FRESULT f_open (FIL* fp, const TCHAR* path, BYTE mode);				/* Open or create a file */
 FRESULT f_close (FIL* fp);											/* Close an open file object */
 FRESULT f_read (FIL* fp, void* buff, UINT btr, UINT* br);			/* Read data from the file */

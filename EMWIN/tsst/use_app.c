@@ -129,7 +129,7 @@ static void _cbuseappDialog(WM_MESSAGE * pMsg) {
 	
 	  
 	FRAMEWIN_SetFont(hItem,&GUI_FontHZ16);
-	FRAMEWIN_SetTextColor(hItem, GUI_RED);
+	FRAMEWIN_SetTextColor(hItem, GUI_BLACK);
 	FRAMEWIN_SetTitleHeight(hItem,20);
 	FRAMEWIN_SetText(hItem, " π”√¬ ");
     //

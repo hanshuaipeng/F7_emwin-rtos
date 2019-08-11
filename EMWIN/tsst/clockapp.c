@@ -415,7 +415,7 @@ static void _cbCallbackRTC(WM_MESSAGE * pMsg)
                     switch(NCode)
                     {
                         case WM_NOTIFICATION_RELEASED:
-                            App_CalendarChild();
+                            App_CalendarChild(hWin);
                             break;
                     }
                     break;
@@ -440,7 +440,7 @@ void App_Calendar(void)
 	GUI_CreateDialogBox(_aDialogCreateRTC, 
 	                    GUI_COUNTOF(_aDialogCreateRTC), 
 	                    &_cbCallbackRTC, 
-	                    0, 
+	                    WM_HBKWIN, 
 	                    0, 
 	                    0);
 }

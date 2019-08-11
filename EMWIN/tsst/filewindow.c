@@ -54,9 +54,9 @@ static void _cbDocumentAppDialog(WM_MESSAGE * pMsg) {
 			FRAMEWIN_AddMaxButton(hItem,FRAMEWIN_BUTTON_RIGHT,2);   //添加最大化按钮
 			FRAMEWIN_AddMinButton(hItem,FRAMEWIN_BUTTON_RIGHT,2);   //添加最小化按钮
 			
-			  
+			FRAMEWIN_SetTitleHeight(hItem,20);
 			FRAMEWIN_SetFont(hItem,&GUI_FontHZ16);
-			FRAMEWIN_SetTextColor(hItem, GUI_RED);
+			FRAMEWIN_SetTextColor(hItem, GUI_BLACK);
 			FRAMEWIN_SetText(hItem, "文件管理");
 				
 			BUTTON_SetFont(WM_GetDialogItem(hItem,ID_BUTTON_0),&GUI_FontHZ16);
@@ -122,7 +122,7 @@ static void _cbDocumentAppDialog(WM_MESSAGE * pMsg) {
 							}
 							else
 							{
-								CreatePICTURE();
+//								CreatePICTURE();
 							}
 						break;
 					}

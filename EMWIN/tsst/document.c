@@ -108,6 +108,7 @@ FRESULT scan_files (char* path,LISTVIEW_Handle handle)
 			File_Data->ALL_File_Count++;
         }
     }
+	f_closedir(&dir);
 	xTaskResumeAll();	        //µ÷¶ÈÆ÷½âËø
     return res;
 }

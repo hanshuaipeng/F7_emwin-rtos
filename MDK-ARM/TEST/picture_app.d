@@ -131,4 +131,5 @@ test\picture_app.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
 test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\GIF\gifdisplay.h
 test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\BMP\bmpdisplay.h
+test\picture_app.o: ..\EMWIN\STemWinHZ\EmWinHZFont.h
 test\picture_app.o: ..\EMWIN\tsst\document.h

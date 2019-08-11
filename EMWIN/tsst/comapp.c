@@ -102,7 +102,7 @@ void InitDialog(WM_MESSAGE * pMsg)
     FRAMEWIN_SetTitleHeight(hWin,20);
 	FRAMEWIN_SetTextAlign(hWin, GUI_TA_HCENTER | GUI_TA_VCENTER);
 	FRAMEWIN_SetFont(hWin,&GUI_FontHZ16);
-	FRAMEWIN_SetTextColor(hWin, GUI_RED);
+	FRAMEWIN_SetTextColor(hWin, GUI_BLACK);
 	FRAMEWIN_SetText(hWin, "´®¿Úµ÷ÊÔ");
 	
 	BUTTON_SetFont(WM_GetDialogItem(hWin,GUI_ID_BUTTON1), &GUI_FontHZ12);

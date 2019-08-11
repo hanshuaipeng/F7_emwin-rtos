@@ -87,7 +87,7 @@ void QRcodeInitDialog(WM_MESSAGE * pMsg)
     FRAMEWIN_AddMinButton(hWin, FRAMEWIN_BUTTON_RIGHT, 2);
     FRAMEWIN_SetTitleHeight(hWin,20);
 	FRAMEWIN_SetFont(hWin,&GUI_FontHZ16);
-	FRAMEWIN_SetTextColor(hWin, GUI_RED);
+	FRAMEWIN_SetTextColor(hWin, GUI_BLACK);
 	FRAMEWIN_SetText(hWin, "ЖўЮЌТы");
 }
 

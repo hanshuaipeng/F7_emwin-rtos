@@ -1679,8 +1679,8 @@ static FRESULT dir_clear (	/* Returns FR_OK or FR_DISK_ERR */
 /*-----------------------------------------------------------------------*/
 /* Directory handling - Set directory index                              */
 /*-----------------------------------------------------------------------*/
-
-static FRESULT dir_sdi (	/* FR_OK(0):succeeded, !=0:error */
+//static
+FRESULT dir_sdi (	/* FR_OK(0):succeeded, !=0:error */
 	DIR* dp,		/* Pointer to directory object */
 	DWORD ofs		/* Offset of directory table */
 )

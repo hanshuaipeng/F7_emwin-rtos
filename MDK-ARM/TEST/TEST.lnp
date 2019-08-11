@@ -91,7 +91,7 @@
 "test\timers.o"
 "test\heap_4.o"
 "test\port.o"
-"..\EMWIN\STemWin\Lib\STemWin_CM7_OS_wc16_ot.a"
+"..\EMWIN\STemWin\Lib\GUI_CM4F_L.lib"
 "test\gui_x_touch_analog.o"
 "test\guiconf.o"
 "test\lcdconf_lin_template.o"
@@ -150,6 +150,7 @@
 "test\clockapp.o"
 "test\clockapp_usepic.o"
 "test\setclock.o"
+"test\warndialog.o"
 --library_type=microlib --strict --scatter "TEST\TEST.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
