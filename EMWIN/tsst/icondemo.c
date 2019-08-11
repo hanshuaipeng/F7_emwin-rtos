@@ -108,7 +108,7 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 										HzFontupdataCreate();    //创建字库升级
 									break;
                                 case 3:		//APP3
-                                    CreatePICTURE();    //创建图片
+                                    CreatePICTURE(1,WM_HBKWIN);    //创建图片
 									break;
 								case 4:		//APP3
                                     CreateUseAppwin();    //创建使用率

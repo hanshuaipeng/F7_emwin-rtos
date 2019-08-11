@@ -122,7 +122,7 @@ static void _cbDocumentAppDialog(WM_MESSAGE * pMsg) {
 							}
 							else
 							{
-								CreatePICTURE();
+								CreatePICTURE(0,pMsg->hWin);
 							}
 						break;
 					}

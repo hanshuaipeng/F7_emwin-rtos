@@ -46,7 +46,6 @@ test\picture_app.o: ..\EMWIN\STemWin\inc\SWIPELIST.h
 test\picture_app.o: ..\EMWIN\STemWin\inc\TEXT.h
 test\picture_app.o: ..\EMWIN\STemWin\inc\TREEVIEW.h
 test\picture_app.o: ..\EMWIN\STemWin\inc\KNOB.h
-test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\PNG\pngdisplay.h
 test\picture_app.o: ../Inc/mysys.h
 test\picture_app.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
 test\picture_app.o: ../Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h
@@ -128,8 +127,10 @@ test\picture_app.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM
 test\picture_app.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 test\picture_app.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 test\picture_app.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\PNG\pngdisplay.h
 test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
 test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\GIF\gifdisplay.h
 test\picture_app.o: ..\EMWIN\EMWIN_PICTURE\BMP\bmpdisplay.h
 test\picture_app.o: ..\EMWIN\STemWinHZ\EmWinHZFont.h
 test\picture_app.o: ..\EMWIN\tsst\document.h
+test\picture_app.o: ..\EMWIN\tsst\warndialog.h

@@ -123,7 +123,6 @@ test\icondemo.o: ..\EMWIN\STemWin\inc\MESSAGEBOX.h
 test\icondemo.o: ..\EMWIN\STemWinHZ\Hzfontupdata.h
 test\icondemo.o: ..\EMWIN\tsst\filewindow.h
 test\icondemo.o: ..\EMWIN\tsst\picture_app.h
-test\icondemo.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
 test\icondemo.o: ../Inc/mysys.h
 test\icondemo.o: ../Drivers/CMSIS/Include/core_cm7.h
 test\icondemo.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
@@ -136,6 +135,7 @@ test\icondemo.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM
 test\icondemo.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
 test\icondemo.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 test\icondemo.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+test\icondemo.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
 test\icondemo.o: ..\EMWIN\tsst\use_app.h
 test\icondemo.o: ..\EMWIN\KEYPAD\keypad.h
 test\icondemo.o: ..\T9INPUT\pyinput.h
