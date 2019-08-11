@@ -259,7 +259,10 @@ static void _cbpicDialog(WM_MESSAGE * pMsg)
 			break;
 		case WM_PAINT:
 			GUI_SetBkColor(GUI_BLACK);
-            GUI_Clear(); 
+            GUI_Clear();
+			memset(text_buf,0,sizeof(text_buf));
+			sprintf(text_buf,"%d/%d",curindex+1,totwavnum);
+			TEXT_SetText(WM_GetDialogItem(pMsg->hWin, ID_TEXT_0), text_buf);
 			show_picture();
 			break;
 		case WM_NOTIFY_PARENT:
