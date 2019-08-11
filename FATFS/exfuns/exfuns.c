@@ -4,7 +4,7 @@
 #include "usart.h"
 
 #define FILE_MAX_TYPE_NUM		7	//最多FILE_MAX_TYPE_NUM个大类
-#define FILE_MAX_SUBT_NUM		4	//最多FILE_MAX_SUBT_NUM个小类
+#define FILE_MAX_SUBT_NUM		5	//最多FILE_MAX_SUBT_NUM个小类
 
  //文件类型列表
 uint8_t*const FILE_TYPE_TBL[FILE_MAX_TYPE_NUM][FILE_MAX_SUBT_NUM]=
@@ -14,7 +14,7 @@ uint8_t*const FILE_TYPE_TBL[FILE_MAX_TYPE_NUM][FILE_MAX_SUBT_NUM]=
 {"NES","SMS"},		//NES/SMS文件
 {"TXT","C","H"},	//文本文件
 {"WAV","MP3","APE","FLAC"},//支持的音乐文件
-{"BMP","JPG","JPEG","GIF"},//图片文件
+{"BMP","JPG","JPEG","GIF","PNG"},//图片文件
 {"AVI"},			//视频文件
 };
 ///////////////////////////////公共文件区,使用malloc的时候////////////////////////////////////////////

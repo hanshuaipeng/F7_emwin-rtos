@@ -151,6 +151,9 @@
 "test\clockapp_usepic.o"
 "test\setclock.o"
 "test\warndialog.o"
+"test\right.o"
+"test\return.o"
+"test\left.o"
 --library_type=microlib --strict --scatter "TEST\TEST.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

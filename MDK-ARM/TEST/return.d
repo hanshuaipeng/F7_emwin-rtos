@@ -1,0 +1,10 @@
+test\return.o: ..\EMWIN\tsst\return.c
+test\return.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\return.o: ..\EMWIN\STemWin\inc\GUI.h
+test\return.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+test\return.o: ..\EMWIN\STemWin\inc\GUI_ConfDefaults.h
+test\return.o: ..\EMWIN\STemWin\Config\GUIConf.h
+test\return.o: ..\EMWIN\STemWin\inc\GUI_Type.h
+test\return.o: ..\EMWIN\STemWin\inc\LCD.h
+test\return.o: ..\EMWIN\STemWin\inc\Global.h
+test\return.o: ..\EMWIN\STemWin\inc\GUI_Version.h

@@ -1281,6 +1281,21 @@
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\warndialog.c</FilePath>
             </File>
+            <File>
+              <FileName>right.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\right.c</FilePath>
+            </File>
+            <File>
+              <FileName>return.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\return.c</FilePath>
+            </File>
+            <File>
+              <FileName>left.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\left.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
