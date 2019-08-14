@@ -129,4 +129,4 @@ test\setclock.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers
 test\setclock.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 test\setclock.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 test\setclock.o: ..\EMWIN\STemWinHZ\EmWinHZFont.h
-test\setclock.o: ..\EMWIN\tsst\clockapp_usepic.h
+test\setclock.o: ..\EMWIN\EMWIN_USEPICTURE\clockapp_usepic.h

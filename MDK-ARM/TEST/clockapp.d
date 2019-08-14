@@ -129,5 +129,5 @@ test\clockapp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers
 test\clockapp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 test\clockapp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 test\clockapp.o: ..\EMWIN\STemWinHZ\EmWinHZFont.h
-test\clockapp.o: ..\EMWIN\tsst\clockapp_usepic.h
+test\clockapp.o: ..\EMWIN\EMWIN_USEPICTURE\clockapp_usepic.h
 test\clockapp.o: ..\EMWIN\tsst\setclock.h

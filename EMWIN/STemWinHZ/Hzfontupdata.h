@@ -19,5 +19,5 @@
 uint32_t emwin_fupd_prog(uint32_t fsize,uint32_t pos); //EMWIN使用的显示更新进度
 uint8_t emwin_updata_fontx(uint8_t *fxpath,uint8_t fx);//EMWIN使用的更新指定字库函数
 uint8_t emwin_update_font(uint8_t* src);    //EMWIN使用的字库更新函数
-void HzFontupdataCreate(void);
+void HzFontupdataCreate(GUI_HWIN hwin);
 #endif

@@ -1,4 +1,4 @@
-test\left.o: ..\EMWIN\tsst\left.c
+test\left.o: ..\EMWIN\EMWIN_USEPICTURE\left.c
 test\left.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 test\left.o: ..\EMWIN\STemWin\inc\GUI.h
 test\left.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

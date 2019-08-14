@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F767xx,USE_USB_FS</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;..\FATFS\src;..\USB\STM32_USB_Host_Library\Core\Inc;..\USB;..\USB\STM32_USB_Host_Library\Class\MSC\Inc;..\FATFS\exfuns;..\Chinese;..\TOUCH;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;..\Drivers\CMSIS\DSP\Include;..\EMWIN\STemWin\Config;..\EMWIN\STemWin\inc;..\EMWIN\DEMO;..\EMWIN\tsst;..\EMWIN\STemWinHZ;..\EMWIN\HZDEMO;..\EMWIN\JPEG;..\EMWIN\EMWIN_PICTURE\BMP;..\EMWIN\EMWIN_PICTURE\GIF;..\EMWIN\EMWIN_PICTURE\JPEG;..\EMWIN\EMWIN_PICTURE\PNG;..\EMWIN;..\EMWIN\STemWinPNG;..\EMWIN\KEYPAD;..\T9INPUT</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F7xx_HAL_Driver/Inc;../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F7xx/Include;../Drivers/CMSIS/Include;..\FATFS\src;..\USB\STM32_USB_Host_Library\Core\Inc;..\USB;..\USB\STM32_USB_Host_Library\Class\MSC\Inc;..\FATFS\exfuns;..\Chinese;..\TOUCH;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;..\Drivers\CMSIS\DSP\Include;..\EMWIN\STemWin\Config;..\EMWIN\STemWin\inc;..\EMWIN\DEMO;..\EMWIN\tsst;..\EMWIN\STemWinHZ;..\EMWIN\HZDEMO;..\EMWIN\JPEG;..\EMWIN\EMWIN_PICTURE\BMP;..\EMWIN\EMWIN_PICTURE\GIF;..\EMWIN\EMWIN_PICTURE\JPEG;..\EMWIN\EMWIN_PICTURE\PNG;..\EMWIN;..\EMWIN\STemWinPNG;..\EMWIN\KEYPAD;..\T9INPUT;..\EMWIN\EMWIN_USEPICTURE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1204,6 +1204,41 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>EMWIN_USEPICTURE</GroupName>
+          <Files>
+            <File>
+              <FileName>clockapp_usepic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\EMWIN_USEPICTURE\clockapp_usepic.c</FilePath>
+            </File>
+            <File>
+              <FileName>fontupdate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\EMWIN_USEPICTURE\fontupdate.c</FilePath>
+            </File>
+            <File>
+              <FileName>left.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\EMWIN_USEPICTURE\left.c</FilePath>
+            </File>
+            <File>
+              <FileName>return.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\EMWIN_USEPICTURE\return.c</FilePath>
+            </File>
+            <File>
+              <FileName>right.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\EMWIN_USEPICTURE\right.c</FilePath>
+            </File>
+            <File>
+              <FileName>systemupdate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\EMWIN_USEPICTURE\systemupdate.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>EMWIN_APP</GroupName>
           <Files>
             <File>
@@ -1267,11 +1302,6 @@
               <FilePath>..\EMWIN\tsst\clockapp.c</FilePath>
             </File>
             <File>
-              <FileName>clockapp_usepic.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMWIN\tsst\clockapp_usepic.c</FilePath>
-            </File>
-            <File>
               <FileName>setclock.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\setclock.c</FilePath>
@@ -1282,34 +1312,9 @@
               <FilePath>..\EMWIN\tsst\warndialog.c</FilePath>
             </File>
             <File>
-              <FileName>right.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMWIN\tsst\right.c</FilePath>
-            </File>
-            <File>
-              <FileName>return.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMWIN\tsst\return.c</FilePath>
-            </File>
-            <File>
-              <FileName>left.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMWIN\tsst\left.c</FilePath>
-            </File>
-            <File>
               <FileName>updateapp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\updateapp.c</FilePath>
-            </File>
-            <File>
-              <FileName>fontupdate.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMWIN\tsst\fontupdate.c</FilePath>
-            </File>
-            <File>
-              <FileName>systemupdate.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\EMWIN\tsst\systemupdate.c</FilePath>
             </File>
           </Files>
         </Group>

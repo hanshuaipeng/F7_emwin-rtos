@@ -149,7 +149,7 @@ static void updateappCallback(WM_MESSAGE * pMsg)
                     {
                         case WM_NOTIFICATION_RELEASED:
 							if(warnningTask("更新字库",pMsg->hWin))
-								HzFontupdataCreate();    //创建字库升级
+								HzFontupdataCreate(pMsg->hWin);    //创建字库升级
                             break;
                     }
                     break;

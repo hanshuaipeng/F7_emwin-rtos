@@ -252,9 +252,9 @@ static void EmWinHzDialog(WM_MESSAGE * pMsg)
 }
 
 //创建字库更新界面
-void HzFontupdataCreate(void) 
+void HzFontupdataCreate(GUI_HWIN hwin) 
 {
-    HzfontWin=GUI_CreateDialogBox(EmwinHzDialog, GUI_COUNTOF(EmwinHzDialog),EmWinHzDialog,WM_HBKWIN, 0, 0);
+    HzfontWin=GUI_CreateDialogBox(EmwinHzDialog, GUI_COUNTOF(EmwinHzDialog),EmWinHzDialog,hwin, 0, 0);
     GUI_Exec();
     while(1)
     {
