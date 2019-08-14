@@ -106,6 +106,8 @@ static void _cbDocumentAppDialog(WM_MESSAGE * pMsg) {
 						case WM_NOTIFICATION_RELEASED:
 							listviewitem=LISTVIEW_GetSel(WM_GetDialogItem(pMsg->hWin,ID_LISTVIEW_0));//获取选中的项目编号
 							//返回指定单元格的文本
+						if(listviewitem!=0xffffffff)
+						{
 							strcat(Now_Path,"/");
 							printf("%s\r\n",Now_Path);
 							memset(list_data,0,sizeof(list_data));
@@ -124,6 +126,7 @@ static void _cbDocumentAppDialog(WM_MESSAGE * pMsg) {
 							{
 								CreatePICTURE(0,pMsg->hWin);
 							}
+						}
 						break;
 					}
 				break;

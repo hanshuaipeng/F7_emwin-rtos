@@ -45,7 +45,7 @@ WM_HWIN HzfontWin;  //汉字升级窗口
 //对话框资源列表
 static const GUI_WIDGET_CREATE_INFO EmwinHzDialog[]=
 {
-    { WINDOW_CreateIndirect, "Window", ID_WINDOW_0, 0, 0, 800, 480, 0, 0x0, 0 },
+    { WINDOW_CreateIndirect, "Window", ID_WINDOW_0, 0, 0, 480, 272, 0, 0x0, 0 },
     { TEXT_CreateIndirect, "Text", ID_TEXT_0, 20, 15, 320, 28, 0, 0x64, 0 },
     { TEXT_CreateIndirect, "Text", ID_TEXT_1, 20, 40, 150, 20, 0, 0x64, 0 },
     { TEXT_CreateIndirect, "Text", ID_TEXT_2, 180, 40, 80, 20, 0, 0x64, 0 },
