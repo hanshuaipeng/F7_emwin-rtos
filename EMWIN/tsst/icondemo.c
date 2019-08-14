@@ -17,7 +17,7 @@
 #include "rtc.h"
 #include "clockapp.h"
 #include "warndialog.h"
-
+#include "updateapp.h"
 #define ID_ICONVIEW_0   (GUI_ID_USER + 0x01)
 #define ID_TEXT1   		(GUI_ID_USER + 0x02)
 #define ID_TEXT2   		(GUI_ID_USER + 0x03)
@@ -43,7 +43,7 @@ static const BITMAP_ITEM BitmapItemTab1[]={
 	{&bmcom,		"串口"},
 	{&bmQRcode,		"二维码"},
 	{&bmclock,		"时钟"},
-//	{&bmdocument,	"Cument"},
+	{&bmusb,		"USB"},
 //	{&bmfolder,		"Folder"},
 //	{&bmmail,		"Mail"},
 //	{&bmpaint,		"Paint"},
@@ -104,8 +104,9 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 										CreateDocuments();    //创建文件管理APP
 									break;
                                	case 2:		//APP2
-									if(warnningTask("是否确认更新"))
-										HzFontupdataCreate();    //创建字库升级
+									updateappTask(WM_HBKWIN); 
+//									if(warnningTask("是否确认更新"))
+//										HzFontupdataCreate();    //创建字库升级
 									break;
                                 case 3:		//APP3
                                     CreatePICTURE(1,WM_HBKWIN);    //创建图片
@@ -117,11 +118,13 @@ void cb_BkWindow(WM_MESSAGE *pMsg)
 									comAppwin() ;//创建串口
 								break;
 								case 6:	
-									QRcodeapp();		
+									QRcodeapp();	//二维码	
 								break;
 								case 7:	
-//									CreateClockAPP();	
-									App_Calendar();								
+									App_Calendar();		//时钟						
+								break;
+								case 8:	
+//									App_Calendar();		//USB						
 								break;
 								default:break;
 							}

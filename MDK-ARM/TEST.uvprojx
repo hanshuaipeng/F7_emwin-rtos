@@ -1296,6 +1296,21 @@
               <FileType>1</FileType>
               <FilePath>..\EMWIN\tsst\left.c</FilePath>
             </File>
+            <File>
+              <FileName>updateapp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\updateapp.c</FilePath>
+            </File>
+            <File>
+              <FileName>fontupdate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\fontupdate.c</FilePath>
+            </File>
+            <File>
+              <FileName>systemupdate.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\EMWIN\tsst\systemupdate.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

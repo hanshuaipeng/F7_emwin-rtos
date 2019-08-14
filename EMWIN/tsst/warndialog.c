@@ -126,11 +126,11 @@ static void _cbwarnningCallback(WM_MESSAGE * pMsg)
 *
 **********************************************************************
 */
-uint8_t warnningTask(char *buf) 
+uint8_t warnningTask(char *buf,GUI_HWIN hparent) 
 { 
 	GUI_HWIN hwin;
 	uint8_t r=0;
-	hwin=GUI_CreateDialogBox(_awarnningDialogCreate, GUI_COUNTOF(_awarnningDialogCreate), &_cbwarnningCallback, WM_HBKWIN, 140, 86);
+	hwin=GUI_CreateDialogBox(_awarnningDialogCreate, GUI_COUNTOF(_awarnningDialogCreate), &_cbwarnningCallback, hparent, 140, 86);
 	WarnText_Handle=TEXT_CreateEx(49, 30, 101,20,hwin, WM_CF_SHOW, 0, GUI_ID_TEXT0, NULL);
 	TEXT_SetTextAlign(WarnText_Handle,GUI_TA_VCENTER|GUI_TA_CENTER);
 	TEXT_SetFont(WarnText_Handle,&GUI_FontHZ16);

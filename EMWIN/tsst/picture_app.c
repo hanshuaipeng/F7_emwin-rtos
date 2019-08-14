@@ -367,13 +367,13 @@ void CreatePICTURE(uint8_t mode,GUI_HWIN hwin)
 			GUI_CreateDialogBox(_picDialogCreate, GUI_COUNTOF(_picDialogCreate), _cbpicDialog, hwin, 0, 0);
 			break;
 		case 1:
-			warnningTask("检查SD卡");
+			warnningTask("检查SD卡",hwin);
 		break;
 		case 2:
-			warnningTask("无图片文件");
+			warnningTask("无图片文件",hwin);
 		break;
 		case 3:
-			warnningTask("内存申请失败");
+			warnningTask("内存申请失败",hwin);
 		break;
 		default:break;
 	}
