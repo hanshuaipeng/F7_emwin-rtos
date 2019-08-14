@@ -65,6 +65,8 @@
 "test\system_stm32f7xx.o"
 "test\fontupd.o"
 "test\text_zh.o"
+"test\stmflash.o"
+"test\iap.o"
 "test\diskio.o"
 "test\ff.o"
 "test\ffsystem.o"
