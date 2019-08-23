@@ -19,11 +19,14 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-
+#include "Freertos.h"
+#include "task.h"
+#include "queue.h"
 /* USER CODE BEGIN 0 */
 uint8_t aRecBuff[1];
 uint8_t Uart1Buff[REC_LEN];
 uint16_t USART_RX_STA=0;       //接收状态标记	
+extern QueueHandle_t UART_Queue;
 int fputc(int ch, FILE *f)
 {
 	HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
@@ -159,26 +162,29 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 /* USER CODE BEGIN 1 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 	if(huart->Instance == USART1)
 	{
-		if((USART_RX_STA&0x8000)==0)//接收未完成
-		{
-			if(USART_RX_STA&0x4000)//接收到了0x0d
-			{
-				if(aRecBuff[0]!=0x0a)USART_RX_STA=0;//接收错误,重新开始
-				else USART_RX_STA|=0x8000;	//接收完成了 
-			}
-			else //还没收到0X0D
-			{	
-				if(aRecBuff[0]==0x0d)USART_RX_STA|=0x4000;
-				else
-				{
-					Uart1Buff[USART_RX_STA&0X3FFF]=aRecBuff[0] ;
-					USART_RX_STA++;
-					if(USART_RX_STA>(REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
-				}		 
-			}
-		}
+		xQueueSendFromISR(UART_Queue,aRecBuff,&xHigherPriorityTaskWoken);
+		portYIELD_FROM_ISR(xHigherPriorityTaskWoken);//如果需要的话进行一次任务切换
+//		if((USART_RX_STA&0x8000)==0)//接收未完成
+//		{
+//			if(USART_RX_STA&0x4000)//接收到了0x0d
+//			{
+//				if(aRecBuff[0]!=0x0a)USART_RX_STA=0;//接收错误,重新开始
+//				else USART_RX_STA|=0x8000;	//接收完成了 
+//			}
+//			else //还没收到0X0D
+//			{	
+//				if(aRecBuff[0]==0x0d)USART_RX_STA|=0x4000;
+//				else
+//				{
+//					Uart1Buff[USART_RX_STA&0X3FFF]=aRecBuff[0] ;
+//					USART_RX_STA++;
+//					if(USART_RX_STA>(REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
+//				}		 
+//			}
+//		}
 	}
 }
 /* USER CODE END 1 */

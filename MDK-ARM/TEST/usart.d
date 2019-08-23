@@ -70,3 +70,14 @@ test\usart.o: ../Inc/pcf8574.h
 test\usart.o: ..\FATFS\exfuns\exfuns.h
 test\usart.o: ..\Chinese\text_zh.h
 test\usart.o: ..\Chinese\fontupd.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/Freertos.h
+test\usart.o: ../Inc/FreeRTOSConfig.h
+test\usart.o: ../Inc/tim.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1/portmacro.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+test\usart.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

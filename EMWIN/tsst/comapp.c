@@ -30,7 +30,22 @@
 #include "EmWinHZFont.h"
 #include "keypad.h"
 #include "malloc.h"
+#include "Freertos.h"
+#include "task.h"
+#include "queue.h"
+//TOUCH任务
+//设置任务优先级
+#define UART_TASK_PRIO			5
+//任务堆栈大小
+#define UART_STK_SIZE			512
+//任务句柄
+TaskHandle_t UARTTask_Handler;
+//uart任务
+void uart_task(void *pvParameters);
 
+
+QueueHandle_t UART_Queue;
+MULTIEDIT_HANDLE RecShow_Handle;
 //EventsFunctionList
 void OnButtonReleased(WM_MESSAGE * pMsg);
 void OnDropDownSelChanged(WM_MESSAGE * pMsg);
@@ -38,14 +53,34 @@ void OnMultiEditSelChanged(WM_MESSAGE * pMsg);
 //EndofEventsFunctionList
 
 
-/*********************************************************************
-*
-*       static data
-*
-**********************************************************************
-*/
+void UART_TaskCreat(void)
+{
+	taskENTER_CRITICAL();           //进入临界区
+	//创建UART任务
+    xTaskCreate((TaskFunction_t )uart_task,             
+                (const char*    )"uart_task",           
+                (uint16_t       )UART_STK_SIZE,        
+                (void*          )NULL,                  
+                (UBaseType_t    )UART_TASK_PRIO,        
+                (TaskHandle_t*  )&UARTTask_Handler);  
+	UART_Queue=xQueueCreate(10,sizeof(uint8_t));
+	taskEXIT_CRITICAL();            //退出临界区
+}
 
-
+void uart_task(void *pvParameters)
+{
+	BaseType_t xResult;
+	uint8_t ucQueueMsgValue;
+	while(1)
+	{
+		xResult=xQueueReceive(UART_Queue,&ucQueueMsgValue,portMAX_DELAY);
+		if(xResult==pdTRUE)
+		{
+			MULTIEDIT_AddText(RecShow_Handle,(const char*)&ucQueueMsgValue);
+		}
+		vTaskDelay(20);
+	}
+}
 
 /*********************************************************************
 *
@@ -110,15 +145,16 @@ void InitDialog(WM_MESSAGE * pMsg)
 	BUTTON_SetFont(WM_GetDialogItem(hWin,GUI_ID_BUTTON2), &GUI_FontHZ12);
 	BUTTON_SetText(WM_GetDialogItem(hWin,GUI_ID_BUTTON2),"发送");
     //
-    //GUI_ID_MULTIEDIT0
+    //GUI_ID_MULTIEDIT0接收
     //
-	MULTIEDIT_SetFont(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0), &GUI_FontHZ24);
-	MULTIEDIT_SetAutoScrollH(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
-    MULTIEDIT_SetAutoScrollV(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
-	MULTIEDIT_SetFocusable(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),0);
+	RecShow_Handle=WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0);
+	MULTIEDIT_SetFont(RecShow_Handle, &GUI_FontHZ24);
+	MULTIEDIT_SetAutoScrollH(RecShow_Handle,1);
+    MULTIEDIT_SetAutoScrollV(RecShow_Handle,1);
+	MULTIEDIT_SetFocusable(RecShow_Handle,0);
 //	MULTIEDIT_SetReadOnly(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
     //
-    //GUI_ID_MULTIEDIT1
+    //GUI_ID_MULTIEDIT1发送
     //
 	MULTIEDIT_SetFont(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1), &GUI_FontHZ24);
 	 MULTIEDIT_SetAutoScrollH(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1);
@@ -144,7 +180,7 @@ void InitDialog(WM_MESSAGE * pMsg)
     DROPDOWN_AddString(WM_GetDialogItem(hWin,GUI_ID_DROPDOWN1),"9600");
     DROPDOWN_AddString(WM_GetDialogItem(hWin,GUI_ID_DROPDOWN1),"115200");
     DROPDOWN_SetSel(WM_GetDialogItem(hWin,GUI_ID_DROPDOWN1),0);
-
+	UART_TaskCreat();
 }
 
 
@@ -164,6 +200,7 @@ static void _comCallback(WM_MESSAGE * pMsg)
     {
 		case WM_DELETE:
 			WM_DeleteWindow(keypad_dev.hKeypad);//删除键盘
+			vTaskDelete(UARTTask_Handler);//删除任务
 			break;
 		case WM_PID_STATE_CHANGED://点击空白删除键盘
 			WM_DeleteWindow(keypad_dev.hKeypad);//删除键盘
