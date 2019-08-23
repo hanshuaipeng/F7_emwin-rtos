@@ -201,6 +201,7 @@ static void _comCallback(WM_MESSAGE * pMsg)
 		case WM_DELETE:
 			WM_DeleteWindow(keypad_dev.hKeypad);//и╬ЁЩ╪Эел
 			vTaskDelete(UARTTask_Handler);//и╬ЁЩхннЯ
+			vQueueDelete(UART_Queue);//и╬ЁЩ╤сап
 			break;
 		case WM_PID_STATE_CHANGED://╣Ц╩В©у╟ви╬ЁЩ╪Эел
 			WM_DeleteWindow(keypad_dev.hKeypad);//и╬ЁЩ╪Эел

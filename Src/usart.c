@@ -165,8 +165,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 	if(huart->Instance == USART1)
 	{
-		xQueueSendFromISR(UART_Queue,aRecBuff,&xHigherPriorityTaskWoken);
-		portYIELD_FROM_ISR(xHigherPriorityTaskWoken);//如果需要的话进行一次任务切换
+		if(UART_Queue!=NULL)
+		{
+			xQueueSendFromISR(UART_Queue,aRecBuff,&xHigherPriorityTaskWoken);
+			portYIELD_FROM_ISR(xHigherPriorityTaskWoken);//如果需要的话进行一次任务切换
+		}
 //		if((USART_RX_STA&0x8000)==0)//接收未完成
 //		{
 //			if(USART_RX_STA&0x4000)//接收到了0x0d
