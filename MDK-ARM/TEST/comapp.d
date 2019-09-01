@@ -131,3 +131,4 @@ test\comapp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 test\comapp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 test\comapp.o: ..\T9INPUT\pyinput.h
 test\comapp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+test\comapp.o: ../Inc/usart.h

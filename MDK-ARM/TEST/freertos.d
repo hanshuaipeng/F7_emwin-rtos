@@ -147,3 +147,4 @@ test\freertos.o: ..\EMWIN\EMWIN_PICTURE\JPEG\jpegdisplay.h
 test\freertos.o: ..\EMWIN\EMWIN_PICTURE\GIF\gifdisplay.h
 test\freertos.o: ..\EMWIN\EMWIN_PICTURE\BMP\bmpdisplay.h
 test\freertos.o: ..\EMWIN\tsst\picture_app.h
+test\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h

@@ -152,23 +152,23 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>110</LineNumber>
+          <LineNumber>432</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134426568</Address>
+          <Address>134429932</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\EMWIN\tsst\filewindow.c</Filename>
+          <Filename>..\EMWIN\tsst\comapp.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\TEST\../EMWIN/tsst/filewindow.c\110</Expression>
+          <Expression>\\TEST\../EMWIN/tsst/comapp.c\432</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>108</LineNumber>
+          <LineNumber>443</LineNumber>
           <EnabledFlag>1</EnabledFlag>
           <Address>0</Address>
           <ByteObject>0</ByteObject>
@@ -177,7 +177,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\EMWIN\tsst\filewindow.c</Filename>
+          <Filename>..\EMWIN\tsst\comapp.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression></Expression>
         </Bp>
@@ -247,6 +247,16 @@
           <count>12</count>
           <WinNumber>1</WinNumber>
           <ItemText>picoffsettbl[2]</ItemText>
+        </Ww>
+        <Ww>
+          <count>13</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>buffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>14</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>msgq_remain_size</ItemText>
         </Ww>
       </WatchWindow1>
       <MemoryWindow1>

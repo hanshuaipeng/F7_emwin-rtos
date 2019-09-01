@@ -27,7 +27,7 @@
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
-#define REC_LEN 100
+#define REC_LEN 300
 extern uint8_t aRecBuff[1];
 extern uint8_t Uart1Buff[REC_LEN];
 extern uint16_t USART_RX_STA;

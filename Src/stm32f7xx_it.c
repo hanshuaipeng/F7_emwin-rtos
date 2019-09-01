@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usart.h"
+#include "queue.h"
 /* USER CODE END Includes */
   
 /* Private typedef -----------------------------------------------------------*/
@@ -64,6 +65,7 @@ extern TIM_HandleTypeDef htim3;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern DMA_HandleTypeDef hdma_usart1_tx;
 extern UART_HandleTypeDef huart1;
+extern QueueHandle_t UART_Queue;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -163,6 +165,10 @@ void DebugMon_Handler(void)
 extern void xPortSysTickHandler(void);
 void SysTick_Handler(void)
 {
+	static uint16_t old_len=0;
+	static uint8_t count=0;
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+
   /* USER CODE BEGIN SysTick_IRQn 0 */
 
   /* USER CODE END SysTick_IRQn 0 */
@@ -170,7 +176,29 @@ void SysTick_Handler(void)
     {
         xPortSysTickHandler();	
     }
-  HAL_IncTick();
+	HAL_IncTick();
+	if(USART_RX_STA>2&&old_len==USART_RX_STA)
+	{
+		if(UART_Queue!=NULL)
+		{
+			Uart1Buff[0]=USART_RX_STA;//保存数据长度
+			Uart1Buff[1]=USART_RX_STA>>8;
+			xQueueSendFromISR(UART_Queue,Uart1Buff,&xHigherPriorityTaskWoken);
+			USART_RX_STA=2;	//接收数据从Uart1Buff[2]开始
+			memset(Uart1Buff,0,REC_LEN);//清除数据接收缓冲区USART_RX_BUF,用于下一次数据接收
+		
+			portYIELD_FROM_ISR(xHigherPriorityTaskWoken);//如果需要的话进行一次任务切换
+		}
+	}
+	else
+	{
+		count++;
+		if(count==10)
+		{
+			count=0;
+			old_len=USART_RX_STA;
+		}
+	}
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
   /* USER CODE END SysTick_IRQn 1 */
@@ -200,15 +228,27 @@ void TIM3_IRQHandler(void)
 /**
   * @brief This function handles USART1 global interrupt.
   */
+
 void USART1_IRQHandler(void)
 {
-  /* USER CODE BEGIN USART1_IRQn 0 */
+	uint32_t timeout=0;
+    uint32_t maxDelay=0x1FFFF;
 
-  /* USER CODE END USART1_IRQn 0 */
-  HAL_UART_IRQHandler(&huart1);
-  /* USER CODE BEGIN USART1_IRQn 1 */
-	HAL_UART_Receive_IT(&huart1,aRecBuff,1);
-  /* USER CODE END USART1_IRQn 1 */
+	HAL_UART_IRQHandler(&huart1);
+	 while (HAL_UART_GetState(&huart1)!=HAL_UART_STATE_READY)//等待就绪
+	{
+        timeout++;////超时处理
+        if(timeout>maxDelay) break;		
+	}
+     
+	timeout=0;
+	while(HAL_UART_Receive_IT(&huart1,aRecBuff,1)!=HAL_OK)
+	{
+		timeout++; //超时处理
+        if(timeout>maxDelay) break;	
+	}
+	
+
 }
 
 /**

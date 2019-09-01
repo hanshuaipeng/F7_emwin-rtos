@@ -43,6 +43,7 @@
 #include "picture_app.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "queue.h"
 //任务优先级
 #define START_TASK_PRIO			1
 //任务堆栈大小	
@@ -150,7 +151,7 @@ void emwindemo_task(void *pvParameters)
 //	pngdisplay_demo();
 	while(1)
 	{	
-		GUI_Delay(100);
+		GUI_Delay(50);
 	}
 }
 
@@ -165,16 +166,19 @@ void touch_task(void *pvParameters)
 		vTaskDelay(5);		//延时5ms
 	}
 }
-
+extern QueueHandle_t UART_Queue;
 //LED0任务
 void led0_task(void *p_arg)
 {
+	uint8_t a=1;
 	GUI_ALLOC_INFO info;
 //	char CPU_RunInfo[400];
 	while(1)
 	{
+//		if(UART_Queue!=NULL)
+//			xQueueSend(UART_Queue,&a,10);
 		GUI_ALLOC_GetMemInfo(&info);
-		printf("TotalBytes=%ld,UsedBytes=%ld\r\n",info.TotalBytes,info.UsedBytes);
+//		printf("TotalBytes=%ld,UsedBytes=%ld\r\n",info.TotalBytes,info.UsedBytes);
 		HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
 //		memset(CPU_RunInfo,0,400); //信息缓冲区清零
 

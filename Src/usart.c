@@ -24,8 +24,8 @@
 #include "queue.h"
 /* USER CODE BEGIN 0 */
 uint8_t aRecBuff[1];
-uint8_t Uart1Buff[REC_LEN];
-uint16_t USART_RX_STA=0;       //接收状态标记	
+uint8_t Uart1Buff[REC_LEN];		//Uart1Buff[0],Uart1Buff[1]存储数据长度,低字节在前
+uint16_t USART_RX_STA=2;       //接收状态标记	,
 extern QueueHandle_t UART_Queue;
 int fputc(int ch, FILE *f)
 {
@@ -122,7 +122,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     __HAL_LINKDMA(uartHandle,hdmatx,hdma_usart1_tx);
 
     /* USART1 interrupt Init */
-    HAL_NVIC_SetPriority(USART1_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(USART1_IRQn, 6, 0);
     HAL_NVIC_EnableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspInit 1 */
 
@@ -158,36 +158,33 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
   /* USER CODE END USART1_MspDeInit 1 */
   }
 } 
-
 /* USER CODE BEGIN 1 */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 	if(huart->Instance == USART1)
 	{
-		if(UART_Queue!=NULL)
+#if 0
+		if((USART_RX_STA&0x8000)==0)//接收未完成
 		{
-			xQueueSendFromISR(UART_Queue,aRecBuff,&xHigherPriorityTaskWoken);
-			portYIELD_FROM_ISR(xHigherPriorityTaskWoken);//如果需要的话进行一次任务切换
+			if(USART_RX_STA&0x4000)//接收到了0x0d
+			{
+				if(aRecBuff[0]!=0x0a)USART_RX_STA=0;//接收错误,重新开始
+				else USART_RX_STA|=0x8000;	//接收完成了 
+			}
+			else //还没收到0X0D
+			{	
+				if(aRecBuff[0]==0x0d)USART_RX_STA|=0x4000;
+				else
+				{
+					Uart1Buff[USART_RX_STA&0X3FFF]=aRecBuff[0] ;
+					USART_RX_STA++;
+					if(USART_RX_STA>(REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
+				}		 
+			}
 		}
-//		if((USART_RX_STA&0x8000)==0)//接收未完成
-//		{
-//			if(USART_RX_STA&0x4000)//接收到了0x0d
-//			{
-//				if(aRecBuff[0]!=0x0a)USART_RX_STA=0;//接收错误,重新开始
-//				else USART_RX_STA|=0x8000;	//接收完成了 
-//			}
-//			else //还没收到0X0D
-//			{	
-//				if(aRecBuff[0]==0x0d)USART_RX_STA|=0x4000;
-//				else
-//				{
-//					Uart1Buff[USART_RX_STA&0X3FFF]=aRecBuff[0] ;
-//					USART_RX_STA++;
-//					if(USART_RX_STA>(REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
-//				}		 
-//			}
-//		}
+#endif
+		Uart1Buff[USART_RX_STA++]=aRecBuff[0] ;
+		if(USART_RX_STA>(REC_LEN-1))USART_RX_STA=2;//接收数据错误,重新开始接收	
 	}
 }
 /* USER CODE END 1 */

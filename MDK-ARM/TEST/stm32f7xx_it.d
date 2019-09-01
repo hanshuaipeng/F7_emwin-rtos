@@ -81,3 +81,4 @@ test\stm32f7xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrap
 test\stm32f7xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
 test\stm32f7xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
 test\stm32f7xx_it.o: ../Inc/usart.h
+test\stm32f7xx_it.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
