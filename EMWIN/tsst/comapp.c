@@ -201,6 +201,10 @@ void uart_task(void *pvParameters)
 			queue_len=(buffer[0]|buffer[1]<<8)-2;//减去数据长度两个字节，即为实际长度
 //			printf("ucQueueMsgValue=%s\r\n",buffer);
 //			MULTIEDIT_AddText(RecShow_Handle,(const char*)&ucQueueMsgValue);
+			if(MULTIEDIT_GetTextSize(RecShow_Handle)>(4096-queue_len))//检测窗口缓存
+			{
+				MULTIEDIT_SetText(RecShow_Handle,0);
+			}	
 			if(CHECKBOX_GetState(WM_GetDialogItem(Com_Dialog,GUI_ID_CHECK1)) == 1)//16进制显示
 			{
 				HexString=mymalloc(SRAMIN,REC_LEN*2);
@@ -302,6 +306,7 @@ void InitDialog(WM_MESSAGE * pMsg)
 	MULTIEDIT_SetAutoScrollH(RecShow_Handle,1);//自动水平
     MULTIEDIT_SetAutoScrollV(RecShow_Handle,1);//垂直
 	MULTIEDIT_SetFocusable(RecShow_Handle,0);
+	MULTIEDIT_SetBufferSize(RecShow_Handle,4096);//设置接收缓存4k
 //	MULTIEDIT_SetReadOnly(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT0),1);
     //
     //GUI_ID_MULTIEDIT1发送
@@ -311,6 +316,7 @@ void InitDialog(WM_MESSAGE * pMsg)
     MULTIEDIT_SetAutoScrollV(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1);
 	MULTIEDIT_EnableBlink(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),500,1);			//开启光标,周期500ms
     MULTIEDIT_SetInsertMode(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1);  //开启插入模式
+	MULTIEDIT_SetBufferSize(WM_GetDialogItem(hWin,GUI_ID_MULTIEDIT1),1024);//设置接收缓存1k
     //
     //GUI_ID_DROPDOWN0
     //
